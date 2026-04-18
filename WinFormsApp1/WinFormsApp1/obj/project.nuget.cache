@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PR4ZUg8xPbU=",
+  "dgSpecHash": "2UrkTN0cm54=",
   "success": true,
-  "projectFilePath": "Y:\\Programacion III\\source\\TrabajoGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+  "projectFilePath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\facua\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.13\\microsoft.bcl.cryptography.9.0.13.nupkg.sha512",
     "C:\\Users\\facua\\.nuget\\packages\\microsoft.data.sqlclient\\7.0.0\\microsoft.data.sqlclient.7.0.0.nupkg.sha512",

@@ -35,16 +35,16 @@
             // dgvArticulos
             // 
             dgvArticulos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvArticulos.Location = new Point(79, 49);
+            dgvArticulos.Location = new Point(3, 0);
             dgvArticulos.Name = "dgvArticulos";
-            dgvArticulos.Size = new Size(393, 250);
+            dgvArticulos.Size = new Size(385, 584);
             dgvArticulos.TabIndex = 0;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1110, 586);
             Controls.Add(dgvArticulos);
             Name = "Form1";
             Text = "Form1";

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Y:\\Programacion III\\source\\TrabajoGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "Y:\\Programacion III\\source\\TrabajoGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Y:\\Programacion III\\source\\TrabajoGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "Y:\\Programacion III\\source\\TrabajoGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "packagesPath": "C:\\Users\\facua\\.nuget\\packages\\",
-        "outputPath": "Y:\\Programacion III\\source\\TrabajoGrupal\\WinFormsApp1\\WinFormsApp1\\obj\\",
+        "outputPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\facua\\AppData\\Roaming\\NuGet\\NuGet.Config",
