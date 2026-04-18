@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "C:\\Users\\esm\\Desktop\\cositas que voy aprendiendo\\UTN 4to cuatrimestre\\programacion\\git TP1\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "C:\\Users\\esm\\Desktop\\cositas que voy aprendiendo\\UTN 4to cuatrimestre\\programacion\\git TP1\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "C:\\Users\\esm\\Desktop\\cositas que voy aprendiendo\\UTN 4to cuatrimestre\\programacion\\git TP1\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
-        "packagesPath": "C:\\Users\\facua\\.nuget\\packages\\",
-        "outputPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\obj\\",
+        "projectPath": "C:\\Users\\esm\\Desktop\\cositas que voy aprendiendo\\UTN 4to cuatrimestre\\programacion\\git TP1\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "packagesPath": "C:\\Users\\esm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\esm\\Desktop\\cositas que voy aprendiendo\\UTN 4to cuatrimestre\\programacion\\git TP1\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\facua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\esm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,8 +29,7 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net10.0-windows": {
-            "framework": "net10.0-windows7.0",
+          "net10.0-windows7.0": {
             "targetAlias": "net10.0-windows",
             "projectReferences": {}
           }
@@ -44,8 +47,7 @@
         "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
-        "net10.0-windows": {
-          "framework": "net10.0-windows7.0",
+        "net10.0-windows7.0": {
           "targetAlias": "net10.0-windows",
           "dependencies": {
             "Microsoft.Data.SqlClient": {
@@ -72,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

@@ -1,7 +1,11 @@
+using static System.Net.Mime.MediaTypeNames;
+
 namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
+        private List<Articulo> listaArticulo;
+        
         public Form1()
         {
             InitializeComponent();
@@ -10,7 +14,34 @@ namespace WinFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            dgvArticulos.DataSource = negocio.Listar();
+            listaArticulo = negocio.Listar();
+            dgvArticulos.DataSource = listaArticulo;
+            
         }
+
+
+
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            
+            ImagenNegocio imgNegocio = new ImagenNegocio();
+            List<Imagen> imagenes = imgNegocio.ListarImagenPorArticulo(seleccionado.Id);
+            cargarImagen(imagenes[0].ImagenUrl);
+        }
+
+        private void cargarImagen(string url)
+        {
+            try
+            {
+                pbArticulo.Load(url);
+            }
+            catch (Exception ex)
+            {
+                pbArticulo.Load("https://t4.ftcdn.net/jpg/06/57/37/01/360_F_657370150_pdNeG5pjI976ZasVbKN9VqH1rfoykdYU.jpg");
+
+            }
+        }
+
     }
 }
