@@ -375,6 +375,39 @@
             "related": ".xml"
           }
         }
+      },
+      "dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/dominio.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "negocio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "7.0.0",
+          "dominio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/negocio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/negocio.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
       }
     }
   },
@@ -957,32 +990,39 @@
         "system.identitymodel.tokens.jwt.8.16.0.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
       ]
+    },
+    "dominio/1.0.0": {
+      "type": "project",
+      "path": "../dominio/dominio.csproj",
+      "msbuildProject": "../dominio/dominio.csproj"
+    },
+    "negocio/1.0.0": {
+      "type": "project",
+      "path": "../negocio/negocio.csproj",
+      "msbuildProject": "../negocio/negocio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0-windows7.0": [
-      "Microsoft.Data.SqlClient >= 7.0.0"
+      "Microsoft.Data.SqlClient >= 7.0.0",
+      "dominio >= 1.0.0",
+      "negocio >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\esm\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\facua\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\esm\\Desktop\\cositas que voy aprendiendo\\UTN 4to cuatrimestre\\programacion\\git TP1\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectUniqueName": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
       "projectName": "WinFormsApp1",
-      "projectPath": "C:\\Users\\esm\\Desktop\\cositas que voy aprendiendo\\UTN 4to cuatrimestre\\programacion\\git TP1\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
-      "packagesPath": "C:\\Users\\esm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\esm\\Desktop\\cositas que voy aprendiendo\\UTN 4to cuatrimestre\\programacion\\git TP1\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\obj\\",
+      "projectPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+      "packagesPath": "C:\\Users\\facua\\.nuget\\packages\\",
+      "outputPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\esm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\facua\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -994,8 +1034,16 @@
       },
       "frameworks": {
         "net10.0-windows7.0": {
+          "framework": "net10.0-windows7.0",
           "targetAlias": "net10.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\dominio\\dominio.csproj": {
+              "projectPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\dominio\\dominio.csproj"
+            },
+            "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\negocio\\negocio.csproj": {
+              "projectPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\negocio\\negocio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1012,6 +1060,7 @@
     },
     "frameworks": {
       "net10.0-windows7.0": {
+        "framework": "net10.0-windows7.0",
         "targetAlias": "net10.0-windows",
         "dependencies": {
           "Microsoft.Data.SqlClient": {
@@ -1038,7 +1087,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

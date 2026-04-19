@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\esm\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\esm\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\facua\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\facua\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false,

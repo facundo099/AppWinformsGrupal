@@ -8,7 +8,9 @@
     ".NETCoreApp,Version=v10.0": {
       "WinFormsApp1/1.0.0": {
         "dependencies": {
-          "Microsoft.Data.SqlClient": "7.0.0"
+          "Microsoft.Data.SqlClient": "7.0.0",
+          "dominio": "1.0.0",
+          "negocio": "1.0.0"
         },
         "runtime": {
           "WinFormsApp1.dll": {}
@@ -282,6 +284,29 @@
             "fileVersion": "8.16.0.26043"
           }
         }
+      },
+      "dominio/1.0.0": {
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "7.0.0"
+        },
+        "runtime": {
+          "dominio.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "negocio/1.0.0": {
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "7.0.0",
+          "dominio": "1.0.0"
+        },
+        "runtime": {
+          "negocio.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -423,6 +448,16 @@
       "sha512": "sha512-rrs2u7DRMXQG2yh0oVyF/vLwosfRv20Ld2iEpYcKwQWXHjfV+gFXNQsQ9p008kR9Ou4pxBs68Q6/9zC8Gi1wjg==",
       "path": "system.identitymodel.tokens.jwt/8.16.0",
       "hashPath": "system.identitymodel.tokens.jwt.8.16.0.nupkg.sha512"
+    },
+    "dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "negocio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
