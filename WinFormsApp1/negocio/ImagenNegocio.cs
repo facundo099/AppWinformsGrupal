@@ -34,11 +34,11 @@ namespace negocio
                     aux.Id = (int)lector["Id"];
                     aux.IdArticulo = (int)lector["IdArticulo"];
                     aux.ImagenUrl = (string)lector["ImagenUrl"];
-                   
+
 
                     lista.Add(aux);
                 }
-                
+
                 return lista;
             }
             catch (Exception ex)
@@ -55,4 +55,3 @@ namespace negocio
         }
     }
 }
-

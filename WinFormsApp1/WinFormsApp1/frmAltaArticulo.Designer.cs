@@ -39,9 +39,9 @@
             lblMarca = new Label();
             lblCategoria = new Label();
             lblPrecio = new Label();
-            txtCategoria = new TextBox();
-            txtMarca = new TextBox();
             txtPrecio = new TextBox();
+            cboCategoria = new ComboBox();
+            cboMarca = new ComboBox();
             SuspendLayout();
             // 
             // lblCodigo
@@ -139,20 +139,6 @@
             lblPrecio.TabIndex = 11;
             lblPrecio.Text = "Precio";
             // 
-            // txtCategoria
-            // 
-            txtCategoria.Location = new Point(163, 247);
-            txtCategoria.Name = "txtCategoria";
-            txtCategoria.Size = new Size(100, 23);
-            txtCategoria.TabIndex = 12;
-            // 
-            // txtMarca
-            // 
-            txtMarca.Location = new Point(163, 290);
-            txtMarca.Name = "txtMarca";
-            txtMarca.Size = new Size(100, 23);
-            txtMarca.TabIndex = 13;
-            // 
             // txtPrecio
             // 
             txtPrecio.Location = new Point(163, 206);
@@ -160,14 +146,32 @@
             txtPrecio.Size = new Size(100, 23);
             txtPrecio.TabIndex = 14;
             // 
+            // cboCategoria
+            // 
+            cboCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboCategoria.FormattingEnabled = true;
+            cboCategoria.Location = new Point(163, 250);
+            cboCategoria.Name = "cboCategoria";
+            cboCategoria.Size = new Size(121, 23);
+            cboCategoria.TabIndex = 15;
+            // 
+            // cboMarca
+            // 
+            cboMarca.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboMarca.FormattingEnabled = true;
+            cboMarca.Location = new Point(163, 290);
+            cboMarca.Name = "cboMarca";
+            cboMarca.Size = new Size(121, 23);
+            cboMarca.TabIndex = 16;
+            // 
             // frmAltaArticulo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(427, 473);
+            Controls.Add(cboMarca);
+            Controls.Add(cboCategoria);
             Controls.Add(txtPrecio);
-            Controls.Add(txtMarca);
-            Controls.Add(txtCategoria);
             Controls.Add(lblPrecio);
             Controls.Add(lblCategoria);
             Controls.Add(lblMarca);
@@ -181,6 +185,7 @@
             Controls.Add(lblCodigo);
             Name = "frmAltaArticulo";
             Text = "Alta Articulos";
+            Load += frmAltaArticulo_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -198,8 +203,8 @@
         private Label lblMarca;
         private Label lblCategoria;
         private Label lblPrecio;
-        private TextBox txtCategoria;
-        private TextBox txtMarca;
         private TextBox txtPrecio;
+        private ComboBox cboCategoria;
+        private ComboBox cboMarca;
     }
 }

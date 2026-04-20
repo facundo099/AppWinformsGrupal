@@ -32,14 +32,32 @@ namespace WinFormsApp1
                 art.Codigo = txtCodigo.Text;
                 art.Nombre = txtNombre.Text;
                 art.Descripcion = txtDescripcion.Text;
+                art.Categoria = (Categoria)cboCategoria.SelectedItem;
+                art.Marca = (Marca)cboMarca.SelectedItem;
                 artNegocio.agregar(art);
                 MessageBox.Show("Agregado correctamente");
                 Close();
-                
+
             }
             catch (Exception ex)
             {
 
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void frmAltaArticulo_Load(object sender, EventArgs e)
+        {
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            try
+            {
+                cboCategoria.DataSource = categoriaNegocio.Listar();
+                cboMarca.DataSource = marcaNegocio.Listar();
+            }
+            catch (Exception ex)
+            {
+                
                 MessageBox.Show(ex.ToString());
             }
         }
