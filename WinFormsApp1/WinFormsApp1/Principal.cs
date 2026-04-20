@@ -22,12 +22,30 @@ namespace WinFormsApp1
         }
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
+            if (dgvArticulos.CurrentRow == null)
+                return;
+
+            Articulo seleccionado = dgvArticulos.CurrentRow.DataBoundItem as Articulo;
+
+            if (seleccionado == null)
+                return;
+
+            ImagenNegocio imgNegocio = new ImagenNegocio();
+            List<Imagen> imagenes = imgNegocio.ListarImagenPorArticulo(seleccionado.Id);
+
+            if (imagenes != null && imagenes.Count > 0)
+                cargarImagen(imagenes[0].ImagenUrl);
+            else
+                cargarImagen("https://via.placeholder.com/150");
+        }
+        /*private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
+        {
             Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
 
             ImagenNegocio imgNegocio = new ImagenNegocio();
             List<Imagen> imagenes = imgNegocio.ListarImagenPorArticulo(seleccionado.Id);
             cargarImagen(imagenes[0].ImagenUrl);
-        }
+        }*/
         private void cargarImagen(string url)
         {
             try

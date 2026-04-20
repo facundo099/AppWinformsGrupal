@@ -17,8 +17,9 @@ namespace negocio
 
             try
             {
-                conexion.ConnectionString = "server=localhost,1433;database=CATALOGO_P3_DB;User Id=sa;Password=BaseDatos#2;TrustServerCertificate=True;Encrypt=True";
+                //conexion.ConnectionString = "server=localhost,1433;database=CATALOGO_P3_DB;User Id=sa;Password=BaseDatos#2;TrustServerCertificate=True;Encrypt=True";
                 //conexion.ConnectionString = "server=localhost\\SQLEXPRESS;database=CATALOGO_P3_DB;integrated security=true;TrustServerCertificate=true";
+                conexion.ConnectionString = "server=(localdb)\\MSSQLLocalDB;database=CATALOGO_P3_DB;integrated security=true;TrustServerCertificate=true";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "Select Id, Codigo, Nombre, Descripcion From ARTICULOS";
                 comando.Connection = conexion;

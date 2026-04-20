@@ -1010,19 +1010,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\facua\\.nuget\\packages\\": {}
+    "C:\\Users\\Theov\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectUniqueName": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
       "projectName": "WinFormsApp1",
-      "projectPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
-      "packagesPath": "C:\\Users\\facua\\.nuget\\packages\\",
-      "outputPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\obj\\",
+      "projectPath": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+      "packagesPath": "C:\\Users\\Theov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\facua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Theov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1034,14 +1039,13 @@
       },
       "frameworks": {
         "net10.0-windows7.0": {
-          "framework": "net10.0-windows7.0",
           "targetAlias": "net10.0-windows",
           "projectReferences": {
-            "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\dominio\\dominio.csproj": {
-              "projectPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\dominio\\dominio.csproj"
+            "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\dominio\\dominio.csproj": {
+              "projectPath": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\dominio\\dominio.csproj"
             },
-            "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\negocio\\negocio.csproj": {
-              "projectPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\negocio\\negocio.csproj"
+            "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\negocio\\negocio.csproj": {
+              "projectPath": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\negocio\\negocio.csproj"
             }
           }
         }
@@ -1060,7 +1064,6 @@
     },
     "frameworks": {
       "net10.0-windows7.0": {
-        "framework": "net10.0-windows7.0",
         "targetAlias": "net10.0-windows",
         "dependencies": {
           "Microsoft.Data.SqlClient": {
@@ -1087,7 +1090,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

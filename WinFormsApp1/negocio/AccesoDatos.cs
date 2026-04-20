@@ -17,8 +17,9 @@ namespace negocio
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=localhost,1433;database=CATALOGO_P3_DB;User Id=sa;Password=BaseDatos#2;TrustServerCertificate=True;Encrypt=True");
+            //conexion = new SqlConnection("server=localhost,1433;database=CATALOGO_P3_DB;User Id=sa;Password=BaseDatos#2;TrustServerCertificate=True;Encrypt=True");
             //conexion = new SqlConnection("server=localhost\\SQLEXPRESS;database=CATALOGO_P3_DB;integrated security=true;TrustServerCertificate=true");
+            conexion = new SqlConnection("server=(localdb)\\MSSQLLocalDB;database=CATALOGO_P3_DB;integrated security=true;TrustServerCertificate=true");
             comando = new SqlCommand();
         }
         public void setearConsulta(string consulta)
@@ -37,8 +38,8 @@ namespace negocio
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                MessageBox.Show(ex.ToString());
+                //throw ex;
             }
         }
         public void ejecutarAccion()
