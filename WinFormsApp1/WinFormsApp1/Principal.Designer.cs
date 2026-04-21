@@ -38,29 +38,30 @@
             // dgvArticulos
             // 
             dgvArticulos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvArticulos.Location = new Point(10, 10);
+            dgvArticulos.Location = new Point(11, 13);
+            dgvArticulos.Margin = new Padding(3, 4, 3, 4);
             dgvArticulos.Name = "dgvArticulos";
             dgvArticulos.RowHeadersWidth = 51;
             dgvArticulos.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvArticulos.Size = new Size(624, 279);
+            dgvArticulos.Size = new Size(900, 372);
             dgvArticulos.TabIndex = 0;
             dgvArticulos.SelectionChanged += dgvArticulos_SelectionChanged;
             // 
             // pbArticulo
             // 
-            pbArticulo.Location = new Point(658, 18);
-            pbArticulo.Margin = new Padding(3, 2, 3, 2);
+            pbArticulo.Location = new Point(917, 40);
             pbArticulo.Name = "pbArticulo";
-            pbArticulo.Size = new Size(406, 236);
+            pbArticulo.Size = new Size(464, 315);
             pbArticulo.SizeMode = PictureBoxSizeMode.StretchImage;
             pbArticulo.TabIndex = 1;
             pbArticulo.TabStop = false;
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(12, 295);
+            btnAgregar.Location = new Point(14, 393);
+            btnAgregar.Margin = new Padding(3, 4, 3, 4);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(111, 32);
+            btnAgregar.Size = new Size(127, 43);
             btnAgregar.TabIndex = 2;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -68,12 +69,13 @@
             // 
             // frmArticulos
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1092, 464);
+            ClientSize = new Size(1393, 453);
             Controls.Add(btnAgregar);
             Controls.Add(pbArticulo);
             Controls.Add(dgvArticulos);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmArticulos";
             Text = "Articulos";
             Load += Form1_Load;
