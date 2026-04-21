@@ -15,18 +15,25 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("Select Id, Codigo, Nombre, Descripcion From ARTICULOS");
+                datos.setearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion,\r\n       M.Id AS IdMarca, M.Descripcion AS Marca,\r\n       C.Id AS IdCategoria, C.Descripcion AS Categoria\r\nFROM ARTICULOS A\r\nINNER JOIN MARCAS M ON M.Id = A.IdMarca\r\nINNER JOIN CATEGORIAS C ON C.Id = A.IdCategoria");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
-
                     aux.Id = (int)datos.Lector["Id"];
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
+
+                    aux.Marca = new Marca();
+                    aux.Marca.Id = (int)datos.Lector["IdMarca"];
+                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
                     
+                    aux.Categoria = new Categoria();
+                    aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
+                    aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+
                     lista.Add(aux);
                 }
                 return lista;
