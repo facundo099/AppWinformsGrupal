@@ -34,6 +34,7 @@ namespace WinFormsApp1
                 art.Descripcion = txtDescripcion.Text;
                 art.Categoria = (Categoria)cboCategoria.SelectedItem;
                 art.Marca = (Marca)cboMarca.SelectedItem;
+                art.Precio = decimal.Parse(txtPrecio.Text);
                 artNegocio.agregar(art);
                 MessageBox.Show("Agregado correctamente");
                 Close();
