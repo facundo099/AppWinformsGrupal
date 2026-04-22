@@ -17,10 +17,14 @@ namespace WinFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            cargar();
+
+        }
+        private void cargar()
+        {
             ArticuloNegocio negocio = new ArticuloNegocio();
             listaArticulo = negocio.Listar();
             dgvArticulos.DataSource = listaArticulo;
-
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
@@ -65,6 +69,7 @@ namespace WinFormsApp1
         {
             frmAltaArticulo alta = new frmAltaArticulo();
             alta.ShowDialog();
+            cargar();
         }
 
 
