@@ -15,16 +15,19 @@ namespace WinFormsApp1
             InitializeComponent();
         }
 
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             cargar();
-
         }
         private void cargar()
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             listaArticulo = negocio.Listar();
             dgvArticulos.DataSource = listaArticulo;
+            dgvArticulos.Columns["Id"].Visible = false;
+
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
@@ -93,6 +96,47 @@ namespace WinFormsApp1
             }
         }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
+            modificar.ShowDialog();
+            cargar();
 
+        }
+
+        private void btnEliminarLogico_Click(object sender, EventArgs e)
+        {
+            eliminar(true);
+        }
+        private void btnEliminarFisico_Click(object sender, EventArgs e)
+        {
+            eliminar();
+        }
+        private void eliminar(bool logico = false)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo seleccionado;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Confirma que desea eliminar el artículo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    if (logico)
+                        negocio.eliminarLogico(seleccionado.Id);
+                    else
+                        negocio.eliminarFisico(seleccionado.Id);
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+       
     }
 }

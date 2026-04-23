@@ -33,6 +33,9 @@
             btnAgregar = new Button();
             btnAnterior = new Button();
             btnSiguiente = new Button();
+            btnModificar = new Button();
+            btnEliminarLogico = new Button();
+            btnEliminarFisico = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvArticulos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbArticulo).BeginInit();
             SuspendLayout();
@@ -93,11 +96,46 @@
             btnSiguiente.UseVisualStyleBackColor = false;
             btnSiguiente.Click += btnSiguiente_Click;
             // 
+            // btnModificar
+            // 
+            btnModificar.Location = new Point(157, 393);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(127, 43);
+            btnModificar.TabIndex = 2;
+            btnModificar.Text = "Modificar";
+            btnModificar.UseVisualStyleBackColor = true;
+            btnModificar.Click += btnModificar_Click;
+            // 
+            // btnEliminarLogico
+            // 
+            btnEliminarLogico.Location = new Point(290, 393);
+            btnEliminarLogico.Margin = new Padding(3, 4, 3, 4);
+            btnEliminarLogico.Name = "btnEliminarLogico";
+            btnEliminarLogico.Size = new Size(127, 43);
+            btnEliminarLogico.TabIndex = 5;
+            btnEliminarLogico.Text = "Eliminar Logico";
+            btnEliminarLogico.UseVisualStyleBackColor = true;
+            btnEliminarLogico.Click += btnEliminarLogico_Click;
+            // 
+            // btnEliminarFisico
+            // 
+            btnEliminarFisico.Location = new Point(423, 393);
+            btnEliminarFisico.Margin = new Padding(3, 4, 3, 4);
+            btnEliminarFisico.Name = "btnEliminarFisico";
+            btnEliminarFisico.Size = new Size(127, 43);
+            btnEliminarFisico.TabIndex = 6;
+            btnEliminarFisico.Text = "Eliminar Fisico";
+            btnEliminarFisico.UseVisualStyleBackColor = true;
+            btnEliminarFisico.Click += btnEliminarFisico_Click;
+            // 
             // frmArticulos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1393, 453);
+            Controls.Add(btnEliminarFisico);
+            Controls.Add(btnEliminarLogico);
+            Controls.Add(btnModificar);
             Controls.Add(btnSiguiente);
             Controls.Add(btnAnterior);
             Controls.Add(btnAgregar);
@@ -119,5 +157,8 @@
         private Button btnAgregar;
         private Button btnAnterior;
         private Button btnSiguiente;
+        private Button btnModificar;
+        private Button btnEliminarLogico;
+        private Button btnEliminarFisico;
     }
 }
