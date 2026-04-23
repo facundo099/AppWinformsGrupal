@@ -118,9 +118,10 @@ namespace negocio
             }
 
         }
-
+        //implementar eliminado lógico cuando exista la columna Activo en DB
         public void eliminarLogico(int id)
         {
+            /*
             AccesoDatos datos = new AccesoDatos();
             try
             {
@@ -135,7 +136,7 @@ namespace negocio
             finally
             {
                 datos.cerrarConexion();
-            }
+            }*/
         }
 
         public void eliminarFisico(int id)

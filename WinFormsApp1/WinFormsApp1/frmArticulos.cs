@@ -20,6 +20,7 @@ namespace WinFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             cargar();
+            btnEliminarLogico.Visible = false; // activar cuando exista columna Activo en DB
         }
         private void cargar()
         {

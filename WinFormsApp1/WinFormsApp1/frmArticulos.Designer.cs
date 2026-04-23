@@ -108,7 +108,7 @@
             // 
             // btnEliminarLogico
             // 
-            btnEliminarLogico.Location = new Point(290, 393);
+            btnEliminarLogico.Location = new Point(423, 393);
             btnEliminarLogico.Margin = new Padding(3, 4, 3, 4);
             btnEliminarLogico.Name = "btnEliminarLogico";
             btnEliminarLogico.Size = new Size(127, 43);
@@ -119,7 +119,7 @@
             // 
             // btnEliminarFisico
             // 
-            btnEliminarFisico.Location = new Point(423, 393);
+            btnEliminarFisico.Location = new Point(290, 393);
             btnEliminarFisico.Margin = new Padding(3, 4, 3, 4);
             btnEliminarFisico.Name = "btnEliminarFisico";
             btnEliminarFisico.Size = new Size(127, 43);
