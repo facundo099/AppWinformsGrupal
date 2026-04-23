@@ -16,7 +16,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select Id, Descripcion from MARCAS");
+                datos.setearConsulta("select Id, Descripcion from MARCAS WHERE Estado = 1");
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
@@ -58,12 +58,12 @@ namespace negocio
             }
         }
 
-        public void EliminarMarca(int id)
+        public void EliminarLogicaMarca(int id)
         {
             try
             {
                 AccesoDatos datos = new AccesoDatos();
-                datos.setearConsulta("delete from MARCAS where id = @id");
+                datos.setearConsulta("UPDATE MARCAS SET Estado = 0 WHERE Id = @id");
                 datos.setearParametro("@id", id);
                 datos.ejecutarAccion();
             }
@@ -73,6 +73,9 @@ namespace negocio
                 throw ex;
             }
         }
+
+        public void EliminarFisicaMarca(int id)
+        { }
 
         public void Modificar(Marca marca)
         {

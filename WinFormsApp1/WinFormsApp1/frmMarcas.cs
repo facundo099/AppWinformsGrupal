@@ -1,4 +1,5 @@
-﻿using negocio;
+﻿using dominio;
+using negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +32,36 @@ namespace WinFormsApp1
         {
             MarcaNegocio negocio = new MarcaNegocio();
             dgvMarcas.DataSource = negocio.Listar();
+        }
+
+        private void btnEliminarMarca_Click(object sender, EventArgs e)
+        {
+            eliminar(true);
+        }
+        private void eliminar(bool logico = false)
+        {
+            MarcaNegocio negocio = new MarcaNegocio();
+            Marca marca;
+            try
+            {
+                //DialogResult respuesta = MessageBox.Show("Quieres Eliminar la categoria?");
+                //if(respuesta == DialogResult.Yes)
+                //{
+                marca = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                if (logico)
+                    negocio.EliminarLogicaMarca(marca.Id);
+                else
+                {
+                    negocio.EliminarFisicaMarca(marca.Id);
+                }
+                cargar();
+                //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
         }
     }
 }

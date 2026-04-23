@@ -1,4 +1,6 @@
-﻿using negocio;
+﻿using dominio;
+using Microsoft.Data.SqlClient;
+using negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,8 +30,42 @@ namespace WinFormsApp1
 
         private void btnAgregarCategoria_Click(object sender, EventArgs e)
         {
-            frmAltaArticulo alta = new frmAltaArticulo();
+            frmAltaCategoria alta = new frmAltaCategoria();
             alta.ShowDialog();
+            cargar();
         }
+
+        private void btnEliminarLogicoCat_Click(object sender, EventArgs e)
+        {
+            eliminar(true);
+        }
+        private void eliminar(bool logico = false)
+        {
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            Categoria categoria;
+            try
+            {
+                //DialogResult respuesta = MessageBox.Show("Quieres Eliminar la categoria?");
+                //if(respuesta == DialogResult.Yes)
+                //{
+                    categoria = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+                    if (logico)
+                         negocio.eliminarLogicaCategoria(categoria.Id);
+                    else
+                    {
+                        negocio.eliminarFisicaCategoria(categoria.Id);
+                    }
+                    cargar();
+                //}
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+         
+        
+        
     }
 }

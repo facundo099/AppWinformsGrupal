@@ -30,6 +30,7 @@
         {
             dgvCategorias = new DataGridView();
             btnAgregarCategoria = new Button();
+            btnEliminarLogicoCat = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCategorias).BeginInit();
             SuspendLayout();
             // 
@@ -38,6 +39,7 @@
             dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCategorias.Location = new Point(12, 35);
             dgvCategorias.Name = "dgvCategorias";
+            dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCategorias.Size = new Size(299, 142);
             dgvCategorias.TabIndex = 0;
             // 
@@ -51,11 +53,22 @@
             btnAgregarCategoria.UseVisualStyleBackColor = true;
             btnAgregarCategoria.Click += btnAgregarCategoria_Click;
             // 
+            // btnEliminarLogicoCat
+            // 
+            btnEliminarLogicoCat.Location = new Point(117, 223);
+            btnEliminarLogicoCat.Name = "btnEliminarLogicoCat";
+            btnEliminarLogicoCat.Size = new Size(65, 25);
+            btnEliminarLogicoCat.TabIndex = 2;
+            btnEliminarLogicoCat.Text = "Eliminar";
+            btnEliminarLogicoCat.UseVisualStyleBackColor = true;
+            btnEliminarLogicoCat.Click += btnEliminarLogicoCat_Click;
+            // 
             // frmCategoria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(514, 316);
+            Controls.Add(btnEliminarLogicoCat);
             Controls.Add(btnAgregarCategoria);
             Controls.Add(dgvCategorias);
             Name = "frmCategoria";
@@ -69,5 +82,6 @@
 
         private DataGridView dgvCategorias;
         private Button btnAgregarCategoria;
+        private Button btnEliminarLogicoCat;
     }
 }

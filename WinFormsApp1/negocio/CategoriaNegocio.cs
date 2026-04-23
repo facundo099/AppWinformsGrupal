@@ -16,7 +16,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select Id, Descripcion from CATEGORIAS");
+                datos.setearConsulta("select Id, Descripcion from CATEGORIAS WHERE Estado = 1");
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
@@ -57,12 +57,12 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
-        public void eliminarCategoria(int id)
+        public void eliminarLogicaCategoria(int id)
         {
             try
             {
                 AccesoDatos datos = new AccesoDatos();
-                datos.setearConsulta("delete from CATEGORIAS where id = @id");
+                datos.setearConsulta("UPDATE CATEGORIAS SET Estado = 0 WHERE Id = @id");
                 datos.setearParametro("@id", id);
                 datos.ejecutarAccion();
             }
@@ -71,6 +71,10 @@ namespace negocio
 
                 throw ex;
             }
+        }
+        public void eliminarFisicaCategoria(int id)
+        {
+            
         }
 
         public void Modificar(Categoria modificado)

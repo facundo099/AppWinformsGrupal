@@ -30,6 +30,7 @@
         {
             dgvMarcas = new DataGridView();
             btnAgregarMarca = new Button();
+            btnEliminarMarca = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvMarcas).BeginInit();
             SuspendLayout();
             // 
@@ -54,11 +55,22 @@
             btnAgregarMarca.UseVisualStyleBackColor = true;
             btnAgregarMarca.Click += btnAgregarMarca_Click;
             // 
+            // btnEliminarMarca
+            // 
+            btnEliminarMarca.Location = new Point(120, 240);
+            btnEliminarMarca.Name = "btnEliminarMarca";
+            btnEliminarMarca.Size = new Size(75, 23);
+            btnEliminarMarca.TabIndex = 2;
+            btnEliminarMarca.Text = "Eliminar";
+            btnEliminarMarca.UseVisualStyleBackColor = true;
+            btnEliminarMarca.Click += btnEliminarMarca_Click;
+            // 
             // frmMarcas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(365, 314);
+            Controls.Add(btnEliminarMarca);
             Controls.Add(btnAgregarMarca);
             Controls.Add(dgvMarcas);
             Name = "frmMarcas";
@@ -72,5 +84,6 @@
 
         private DataGridView dgvMarcas;
         private Button btnAgregarMarca;
+        private Button btnEliminarMarca;
     }
 }
