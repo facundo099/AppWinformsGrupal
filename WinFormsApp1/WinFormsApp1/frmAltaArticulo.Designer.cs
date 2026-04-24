@@ -47,60 +47,56 @@
             // lblCodigo
             // 
             lblCodigo.AutoSize = true;
-            lblCodigo.Location = new Point(140, 98);
+            lblCodigo.Location = new Point(122, 74);
             lblCodigo.Name = "lblCodigo";
-            lblCodigo.Size = new Size(58, 20);
+            lblCodigo.Size = new Size(46, 15);
             lblCodigo.TabIndex = 0;
             lblCodigo.Text = "Código";
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(140, 158);
+            lblNombre.Location = new Point(122, 118);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(64, 20);
+            lblNombre.Size = new Size(51, 15);
             lblNombre.TabIndex = 1;
             lblNombre.Text = "Nombre";
             // 
             // lblDescripcion
             // 
             lblDescripcion.AutoSize = true;
-            lblDescripcion.Location = new Point(117, 211);
+            lblDescripcion.Location = new Point(102, 158);
             lblDescripcion.Name = "lblDescripcion";
-            lblDescripcion.Size = new Size(87, 20);
+            lblDescripcion.Size = new Size(69, 15);
             lblDescripcion.TabIndex = 2;
             lblDescripcion.Text = "Descripción";
             // 
             // txtCodigo
             // 
-            txtCodigo.Location = new Point(210, 95);
-            txtCodigo.Margin = new Padding(3, 4, 3, 4);
+            txtCodigo.Location = new Point(184, 71);
             txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(138, 27);
-            txtCodigo.TabIndex = 3;
+            txtCodigo.Size = new Size(121, 23);
+            txtCodigo.TabIndex = 0;
             // 
             // txtDescripcion
             // 
-            txtDescripcion.Location = new Point(210, 211);
-            txtDescripcion.Margin = new Padding(3, 4, 3, 4);
+            txtDescripcion.Location = new Point(184, 158);
             txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.Size = new Size(138, 27);
-            txtDescripcion.TabIndex = 4;
+            txtDescripcion.Size = new Size(121, 23);
+            txtDescripcion.TabIndex = 2;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(210, 158);
-            txtNombre.Margin = new Padding(3, 4, 3, 4);
+            txtNombre.Location = new Point(184, 118);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(138, 27);
-            txtNombre.TabIndex = 5;
+            txtNombre.Size = new Size(121, 23);
+            txtNombre.TabIndex = 1;
             // 
             // btnAceptar
             // 
-            btnAceptar.Location = new Point(117, 442);
-            btnAceptar.Margin = new Padding(3, 4, 3, 4);
+            btnAceptar.Location = new Point(102, 332);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(86, 31);
+            btnAceptar.Size = new Size(75, 23);
             btnAceptar.TabIndex = 6;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
@@ -108,10 +104,9 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(262, 442);
-            btnCancelar.Margin = new Padding(3, 4, 3, 4);
+            btnCancelar.Location = new Point(229, 332);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(86, 31);
+            btnCancelar.Size = new Size(75, 23);
             btnCancelar.TabIndex = 7;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -120,63 +115,60 @@
             // lblMarca
             // 
             lblMarca.AutoSize = true;
-            lblMarca.Location = new Point(154, 365);
+            lblMarca.Location = new Point(135, 274);
             lblMarca.Name = "lblMarca";
-            lblMarca.Size = new Size(50, 20);
+            lblMarca.Size = new Size(40, 15);
             lblMarca.TabIndex = 9;
             lblMarca.Text = "Marca";
             // 
             // lblCategoria
             // 
             lblCategoria.AutoSize = true;
-            lblCategoria.Location = new Point(130, 315);
+            lblCategoria.Location = new Point(114, 236);
             lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(74, 20);
+            lblCategoria.Size = new Size(58, 15);
             lblCategoria.TabIndex = 10;
             lblCategoria.Text = "Categoria";
             // 
             // lblPrecio
             // 
             lblPrecio.AutoSize = true;
-            lblPrecio.Location = new Point(154, 269);
+            lblPrecio.Location = new Point(135, 202);
             lblPrecio.Name = "lblPrecio";
-            lblPrecio.Size = new Size(50, 20);
+            lblPrecio.Size = new Size(40, 15);
             lblPrecio.TabIndex = 11;
             lblPrecio.Text = "Precio";
             // 
             // txtPrecio
             // 
-            txtPrecio.Location = new Point(210, 266);
-            txtPrecio.Margin = new Padding(3, 4, 3, 4);
+            txtPrecio.Location = new Point(184, 200);
             txtPrecio.Name = "txtPrecio";
-            txtPrecio.Size = new Size(138, 27);
-            txtPrecio.TabIndex = 14;
+            txtPrecio.Size = new Size(121, 23);
+            txtPrecio.TabIndex = 3;
             // 
             // cboCategoria
             // 
             cboCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             cboCategoria.FormattingEnabled = true;
-            cboCategoria.Location = new Point(210, 315);
-            cboCategoria.Margin = new Padding(3, 4, 3, 4);
+            cboCategoria.Location = new Point(184, 236);
             cboCategoria.Name = "cboCategoria";
-            cboCategoria.Size = new Size(138, 28);
-            cboCategoria.TabIndex = 15;
+            cboCategoria.Size = new Size(121, 23);
+            cboCategoria.TabIndex = 4;
             // 
             // cboMarca
             // 
             cboMarca.DropDownStyle = ComboBoxStyle.DropDownList;
             cboMarca.FormattingEnabled = true;
-            cboMarca.Location = new Point(210, 365);
-            cboMarca.Margin = new Padding(3, 4, 3, 4);
+            cboMarca.Location = new Point(184, 274);
             cboMarca.Name = "cboMarca";
-            cboMarca.Size = new Size(138, 28);
-            cboMarca.TabIndex = 16;
+            cboMarca.Size = new Size(121, 23);
+            cboMarca.TabIndex = 5;
             // 
             // frmAltaArticulo
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(488, 521);
+            ClientSize = new Size(427, 391);
             Controls.Add(cboMarca);
             Controls.Add(cboCategoria);
             Controls.Add(txtPrecio);
@@ -191,9 +183,8 @@
             Controls.Add(lblDescripcion);
             Controls.Add(lblNombre);
             Controls.Add(lblCodigo);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmAltaArticulo";
-            Text = "Alta Articulos";
+            Text = "*";
             Load += frmAltaArticulo_Load;
             ResumeLayout(false);
             PerformLayout();

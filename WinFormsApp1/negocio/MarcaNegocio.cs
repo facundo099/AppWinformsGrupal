@@ -16,7 +16,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select Id, Descripcion from MARCAS WHERE Estado = 1");
+                datos.setearConsulta("select Id, Descripcion from MARCAS");
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
@@ -44,7 +44,8 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("INSERT INTO MARCAS (Descripcion)values('" + nueva.Descripcion + "')");
+                datos.setearConsulta("INSERT INTO MARCAS (Descripcion) VALUES (@descripcion)");
+                datos.setearParametro("@descripcion", nueva.Descripcion);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -63,7 +64,7 @@ namespace negocio
             try
             {
                 AccesoDatos datos = new AccesoDatos();
-                datos.setearConsulta("UPDATE MARCAS SET Estado = 0 WHERE Id = @id");
+                datos.setearConsulta("DELETE FROM MARCAS WHERE Id = @id");
                 datos.setearParametro("@id", id);
                 datos.ejecutarAccion();
             }
@@ -96,8 +97,6 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
-
-
 
     }
 

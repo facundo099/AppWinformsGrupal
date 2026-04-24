@@ -302,3 +302,8 @@ C:\Users\esm\Desktop\cositas que voy aprendiendo\UTN 4to cuatrimestre\programaci
 C:\Users\esm\Desktop\cositas que voy aprendiendo\UTN 4to cuatrimestre\programacion\git TP1\AppWinformsGrupal\WinFormsApp1\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.frmCategoria.resources
 C:\Users\esm\Desktop\cositas que voy aprendiendo\UTN 4to cuatrimestre\programacion\git TP1\AppWinformsGrupal\WinFormsApp1\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.frmInicio.resources
 C:\Users\esm\Desktop\cositas que voy aprendiendo\UTN 4to cuatrimestre\programacion\git TP1\AppWinformsGrupal\WinFormsApp1\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.frmMarcas.resources
+Y:\Programacion III\AppWinformsGrupal\WinFormsApp1\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.frmAltaCategoria.resources
+Y:\Programacion III\AppWinformsGrupal\WinFormsApp1\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.frmAltaMarcas.resources
+Y:\Programacion III\AppWinformsGrupal\WinFormsApp1\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.frmCategoria.resources
+Y:\Programacion III\AppWinformsGrupal\WinFormsApp1\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.frmInicio.resources
+Y:\Programacion III\AppWinformsGrupal\WinFormsApp1\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.frmMarcas.resources

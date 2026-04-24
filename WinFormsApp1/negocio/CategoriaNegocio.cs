@@ -16,7 +16,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select Id, Descripcion from CATEGORIAS WHERE Estado = 1");
+                datos.setearConsulta("select Id, Descripcion from CATEGORIAS");
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
@@ -44,7 +44,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("INSERT INTO CATEGORIAS (Descripcion)values('" + nueva.Descripcion + "')");
+                datos.setearConsulta("INSERT INTO CATEGORIAS (Descripcion) VALUES (@descripcion)");
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -59,18 +59,18 @@ namespace negocio
         }
         public void eliminarLogicaCategoria(int id)
         {
-            try
-            {
-                AccesoDatos datos = new AccesoDatos();
-                datos.setearConsulta("UPDATE CATEGORIAS SET Estado = 0 WHERE Id = @id");
-                datos.setearParametro("@id", id);
-                datos.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
+            //try
+            //{
+            //    AccesoDatos datos = new AccesoDatos();
+            //    datos.setearConsulta("UPDATE CATEGORIAS SET Estado = 0 WHERE Id = @id");
+            //    datos.setearParametro("@id", id);
+            //    datos.ejecutarAccion();
+            //}
+            //catch (Exception ex)
+            //{
 
-                throw ex;
-            }
+            //    throw ex;
+            //}
         }
         public void eliminarFisicaCategoria(int id)
         {

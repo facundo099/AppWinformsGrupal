@@ -16,23 +16,27 @@ namespace WinFormsApp1
             InitializeComponent();
         }
 
-        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-            frmCategoria categoria = new frmCategoria();
-            categoria.ShowDialog();
+            this.Close();
         }
 
-        private void articulosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnArticulos_Click(object sender, EventArgs e)
         {
             frmArticulos negocio = new frmArticulos();
             negocio.ShowDialog();
-
         }
 
-        private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnListarMarcas_Click(object sender, EventArgs e)
         {
             frmMarcas negocio = new frmMarcas();
             negocio.ShowDialog();
+        }
+
+        private void btnListarCategorias_Click(object sender, EventArgs e)
+        {
+            frmCategoria categoria = new frmCategoria();
+            categoria.ShowDialog();
         }
     }
 }
