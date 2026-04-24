@@ -42,12 +42,14 @@
             txtPrecio = new TextBox();
             cboCategoria = new ComboBox();
             cboMarca = new ComboBox();
+            txtUrlImagen = new TextBox();
+            lblUrlImagen = new Label();
             SuspendLayout();
             // 
             // lblCodigo
             // 
             lblCodigo.AutoSize = true;
-            lblCodigo.Location = new Point(122, 74);
+            lblCodigo.Location = new Point(121, 35);
             lblCodigo.Name = "lblCodigo";
             lblCodigo.Size = new Size(46, 15);
             lblCodigo.TabIndex = 0;
@@ -56,7 +58,7 @@
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(122, 118);
+            lblNombre.Location = new Point(121, 79);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(51, 15);
             lblNombre.TabIndex = 1;
@@ -65,7 +67,7 @@
             // lblDescripcion
             // 
             lblDescripcion.AutoSize = true;
-            lblDescripcion.Location = new Point(102, 158);
+            lblDescripcion.Location = new Point(101, 119);
             lblDescripcion.Name = "lblDescripcion";
             lblDescripcion.Size = new Size(69, 15);
             lblDescripcion.TabIndex = 2;
@@ -73,21 +75,21 @@
             // 
             // txtCodigo
             // 
-            txtCodigo.Location = new Point(184, 71);
+            txtCodigo.Location = new Point(183, 32);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.Size = new Size(121, 23);
             txtCodigo.TabIndex = 0;
             // 
             // txtDescripcion
             // 
-            txtDescripcion.Location = new Point(184, 158);
+            txtDescripcion.Location = new Point(183, 119);
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.Size = new Size(121, 23);
             txtDescripcion.TabIndex = 2;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(184, 118);
+            txtNombre.Location = new Point(183, 79);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(121, 23);
             txtNombre.TabIndex = 1;
@@ -97,7 +99,7 @@
             btnAceptar.Location = new Point(102, 332);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(75, 23);
-            btnAceptar.TabIndex = 6;
+            btnAceptar.TabIndex = 7;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
             btnAceptar.Click += btnAceptar_Click;
@@ -107,7 +109,7 @@
             btnCancelar.Location = new Point(229, 332);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
-            btnCancelar.TabIndex = 7;
+            btnCancelar.TabIndex = 8;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
@@ -144,7 +146,7 @@
             txtPrecio.Location = new Point(184, 200);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(121, 23);
-            txtPrecio.TabIndex = 3;
+            txtPrecio.TabIndex = 4;
             // 
             // cboCategoria
             // 
@@ -153,7 +155,7 @@
             cboCategoria.Location = new Point(184, 236);
             cboCategoria.Name = "cboCategoria";
             cboCategoria.Size = new Size(121, 23);
-            cboCategoria.TabIndex = 4;
+            cboCategoria.TabIndex = 5;
             // 
             // cboMarca
             // 
@@ -162,13 +164,31 @@
             cboMarca.Location = new Point(184, 274);
             cboMarca.Name = "cboMarca";
             cboMarca.Size = new Size(121, 23);
-            cboMarca.TabIndex = 5;
+            cboMarca.TabIndex = 6;
+            // 
+            // txtUrlImagen
+            // 
+            txtUrlImagen.Location = new Point(183, 160);
+            txtUrlImagen.Name = "txtUrlImagen";
+            txtUrlImagen.Size = new Size(121, 23);
+            txtUrlImagen.TabIndex = 3;
+            // 
+            // lblUrlImagen
+            // 
+            lblUrlImagen.AutoSize = true;
+            lblUrlImagen.Location = new Point(101, 163);
+            lblUrlImagen.Name = "lblUrlImagen";
+            lblUrlImagen.Size = new Size(71, 15);
+            lblUrlImagen.TabIndex = 13;
+            lblUrlImagen.Text = "URL imagen";
             // 
             // frmAltaArticulo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(427, 391);
+            Controls.Add(txtUrlImagen);
+            Controls.Add(lblUrlImagen);
             Controls.Add(cboMarca);
             Controls.Add(cboCategoria);
             Controls.Add(txtPrecio);
@@ -206,5 +226,7 @@
         private TextBox txtPrecio;
         private ComboBox cboCategoria;
         private ComboBox cboMarca;
+        private TextBox txtUrlImagen;
+        private Label lblUrlImagen;
     }
 }

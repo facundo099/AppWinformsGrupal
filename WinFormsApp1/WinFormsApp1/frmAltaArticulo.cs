@@ -34,11 +34,12 @@ namespace WinFormsApp1
         {
             
             ArticuloNegocio artNegocio = new ArticuloNegocio();
+            ImagenNegocio imgNegocio = new ImagenNegocio();
 
             try
             {
                 if (articulo == null)
-                        articulo = new Articulo();
+                    articulo = new Articulo();
 
                 articulo.Codigo = txtCodigo.Text;
                 articulo.Nombre = txtNombre.Text;
@@ -50,21 +51,31 @@ namespace WinFormsApp1
                 if (articulo.Id != 0)
                 {
                     artNegocio.modificar(articulo);
-                    MessageBox.Show("Modificado correctamente");
+                    Imagen img = new Imagen();
+                    img.IdArticulo = articulo.Id;
+                    img.ImagenUrl = txtUrlImagen.Text;
 
+                    imgNegocio.modificar(img);
                 }
                 else
                 {
                     artNegocio.agregar(articulo);
-                    MessageBox.Show("Agregado correctamente");
-                }
-                
 
+                    List<Articulo> lista = artNegocio.Listar();
+                    Articulo ultimo = lista[lista.Count - 1];
+
+                    Imagen nueva = new Imagen();
+                    nueva.IdArticulo = ultimo.Id;
+                    nueva.ImagenUrl = txtUrlImagen.Text;
+
+                    imgNegocio.agregar(nueva);
+                }
+
+                MessageBox.Show("Guardado correctamente");
                 Close();
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
             }
         }
