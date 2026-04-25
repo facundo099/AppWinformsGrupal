@@ -157,5 +157,84 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        public List<Articulo> BuscarArticulo(string campo, string criterio, string filtro)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                string consulta = @"SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio,
+                            M.Id AS IdMarca, M.Descripcion AS Marca,
+                            C.Id AS IdCategoria, C.Descripcion AS Categoria
+                            FROM ARTICULOS A
+                            LEFT JOIN MARCAS M ON M.Id = A.IdMarca
+                            LEFT JOIN CATEGORIAS C ON C.Id = A.IdCategoria WHERE 1=1  ";
+                
+                if (campo == "Nombre")
+                {
+                    if (criterio == "Contiene")
+                        consulta += " AND A.Nombre LIKE '%" + filtro + "%'";
+                    else if (criterio == "Comienza con")
+                        consulta += " AND A.Nombre LIKE '" + filtro + "%'";
+                }
+                else if (campo == "Marca")
+                {
+                    consulta += " AND M.Descripcion LIKE '%" + filtro + "%'";
+                }
+                else if (campo == "Precio")
+                {
+                    if (criterio == "Mayor a")
+                        consulta += " AND A.Precio > " + filtro;
+                    else if (criterio == "Menor a")
+                        consulta += " AND A.Precio < " + filtro;
+                }
+
+                datos.setearConsulta(consulta);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Codigo = (datos.Lector["Codigo"] is DBNull) ? "" : (string)datos.Lector["Codigo"];
+                    aux.Nombre = (datos.Lector["Nombre"] is DBNull) ? "" : (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (datos.Lector["Descripcion"] is DBNull) ? "" : (string)datos.Lector["Descripcion"];
+                    aux.Precio = (datos.Lector["Precio"] is DBNull) ? 0 : (decimal)datos.Lector["Precio"];
+
+
+                    if (!(datos.Lector["Marca"] is DBNull))
+                    {
+                        aux.Marca = new Marca();
+                        aux.Marca.Id = (int)datos.Lector["IdMarca"];
+                        aux.Marca.Descripcion = (string)datos.Lector["Marca"];
+
+                    }
+
+
+                    if (!(datos.Lector["Categoria"] is DBNull))
+                    {
+                        aux.Categoria = new Categoria();
+                        aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
+                        aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+
+                    }
+
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

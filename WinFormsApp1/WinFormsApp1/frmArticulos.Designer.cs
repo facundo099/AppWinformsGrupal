@@ -36,6 +36,13 @@
             btnModificar = new Button();
             btnEliminarLogico = new Button();
             btnEliminarFisico = new Button();
+            lblCampo = new Label();
+            lblCriterio = new Label();
+            lblFiltro = new Label();
+            cboCampo = new ComboBox();
+            cboCriterio = new ComboBox();
+            txtFiltro = new TextBox();
+            btnBuscar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvArticulos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbArticulo).BeginInit();
             SuspendLayout();
@@ -128,11 +135,82 @@
             btnEliminarFisico.UseVisualStyleBackColor = true;
             btnEliminarFisico.Click += btnEliminarFisico_Click;
             // 
+            // lblCampo
+            // 
+            lblCampo.AutoSize = true;
+            lblCampo.Location = new Point(14, 472);
+            lblCampo.Name = "lblCampo";
+            lblCampo.Size = new Size(57, 20);
+            lblCampo.TabIndex = 6;
+            lblCampo.Text = "Campo";
+            // 
+            // lblCriterio
+            // 
+            lblCriterio.AutoSize = true;
+            lblCriterio.Location = new Point(227, 472);
+            lblCriterio.Name = "lblCriterio";
+            lblCriterio.Size = new Size(58, 20);
+            lblCriterio.TabIndex = 7;
+            lblCriterio.Text = "Criterio";
+            // 
+            // lblFiltro
+            // 
+            lblFiltro.AutoSize = true;
+            lblFiltro.Location = new Point(460, 472);
+            lblFiltro.Name = "lblFiltro";
+            lblFiltro.Size = new Size(43, 20);
+            lblFiltro.TabIndex = 8;
+            lblFiltro.Text = "Filtro";
+            // 
+            // cboCampo
+            // 
+            cboCampo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboCampo.FormattingEnabled = true;
+            cboCampo.Location = new Point(77, 469);
+            cboCampo.Name = "cboCampo";
+            cboCampo.Size = new Size(122, 28);
+            cboCampo.TabIndex = 9;
+            cboCampo.SelectedIndexChanged += cboCampo_SelectedIndexChanged;
+            // 
+            // cboCriterio
+            // 
+            cboCriterio.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboCriterio.FormattingEnabled = true;
+            cboCriterio.Location = new Point(290, 469);
+            cboCriterio.Name = "cboCriterio";
+            cboCriterio.Size = new Size(122, 28);
+            cboCriterio.TabIndex = 10;
+            // 
+            // txtFiltro
+            // 
+            txtFiltro.Location = new Point(509, 469);
+            txtFiltro.Name = "txtFiltro";
+            txtFiltro.Size = new Size(141, 27);
+            txtFiltro.TabIndex = 11;
+            txtFiltro.TextChanged += txtFiltro_TextChanged;
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.Location = new Point(696, 466);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(119, 32);
+            btnBuscar.TabIndex = 12;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
             // frmArticulos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1393, 453);
+            ClientSize = new Size(1393, 514);
+            Controls.Add(btnBuscar);
+            Controls.Add(txtFiltro);
+            Controls.Add(cboCriterio);
+            Controls.Add(cboCampo);
+            Controls.Add(lblFiltro);
+            Controls.Add(lblCriterio);
+            Controls.Add(lblCampo);
             Controls.Add(btnEliminarFisico);
             Controls.Add(btnEliminarLogico);
             Controls.Add(btnModificar);
@@ -148,6 +226,7 @@
             ((System.ComponentModel.ISupportInitialize)dgvArticulos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbArticulo).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -160,5 +239,12 @@
         private Button btnModificar;
         private Button btnEliminarLogico;
         private Button btnEliminarFisico;
+        private Label lblCampo;
+        private Label lblCriterio;
+        private Label lblFiltro;
+        private ComboBox cboCampo;
+        private ComboBox cboCriterio;
+        private TextBox txtFiltro;
+        private Button btnBuscar;
     }
 }

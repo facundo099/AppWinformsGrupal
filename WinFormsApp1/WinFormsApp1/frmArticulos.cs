@@ -21,6 +21,11 @@ namespace WinFormsApp1
         {
             cargar();
             btnEliminarLogico.Visible = false; // activar cuando exista columna Activo en DB
+            cboCampo.Items.Add("Nombre");
+            cboCampo.Items.Add("Marca");
+            cboCampo.Items.Add("Precio");
+            
+
         }
         private void cargar()
         {
@@ -43,12 +48,18 @@ namespace WinFormsApp1
             imagenesSeleccionadas = imgNegocio.ListarImagenPorArticulo(seleccionado.Id);
             indiceImagen = 0;
 
-            pbArticulo.Load(HelperImagen.CargarImagen(imagenesSeleccionadas, indiceImagen));
-
+            try
+            {
+                pbArticulo.Load(HelperImagen.CargarImagen(imagenesSeleccionadas, indiceImagen));
+            }
+            catch
+            {
+                pbArticulo.Load("url default");
+            }
 
         }
 
-       
+
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -64,7 +75,14 @@ namespace WinFormsApp1
             if (imagenesSeleccionadas != null && indiceImagen > 0)
             {
                 indiceImagen--;
-                pbArticulo.Load(HelperImagen.CargarImagen(imagenesSeleccionadas, indiceImagen));
+                try
+                {
+                    pbArticulo.Load(HelperImagen.CargarImagen(imagenesSeleccionadas, indiceImagen));
+                }
+                catch
+                {
+                    pbArticulo.Load("url default");
+                }
             }
 
         }
@@ -74,7 +92,14 @@ namespace WinFormsApp1
             if (imagenesSeleccionadas != null && indiceImagen < imagenesSeleccionadas.Count - 1)
             {
                 indiceImagen++;
-                pbArticulo.Load(HelperImagen.CargarImagen(imagenesSeleccionadas, indiceImagen));
+                try
+                {
+                    pbArticulo.Load(HelperImagen.CargarImagen(imagenesSeleccionadas, indiceImagen));
+                }
+                catch
+                {
+                    pbArticulo.Load("url default");
+                }
             }
         }
 
@@ -117,7 +142,84 @@ namespace WinFormsApp1
                 MessageBox.Show(ex.ToString());
             }
         }
+        private bool validarBuscar()
+        {
+            if (cboCampo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar un campo.");
+                return true;
+            }
 
-       
+            if (cboCriterio.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar un criterio.");
+                return true;
+            }
+
+            if (txtFiltro.Text.Trim() == "")
+            {
+                MessageBox.Show("Debe ingresar un filtro.");
+                return true;
+            }
+
+            if (cboCampo.SelectedItem.ToString() == "Precio")
+            {
+                decimal valorPrecio;
+                string filtroValidado = txtFiltro.Text.Replace(",", ".");
+
+                if (!decimal.TryParse(filtroValidado,
+                    System.Globalization.NumberStyles.Any,
+                    System.Globalization.CultureInfo.InvariantCulture,
+                    out valorPrecio))
+                {
+                    MessageBox.Show("Debe ingresar un valor numérico válido para el precio.");
+                    return true;
+                }
+            }
+
+            return false;
+        }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                if(validarBuscar())
+                    return;
+
+                string campo = cboCampo.SelectedItem.ToString();
+                string criterio = cboCriterio.SelectedItem.ToString();
+                string filtro = txtFiltro.Text;
+                dgvArticulos.DataSource = negocio.BuscarArticulo(campo, criterio, filtro);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void cboCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = cboCampo.SelectedItem.ToString();
+            cboCriterio.Items.Clear();
+
+            if (opcion == "Precio")
+            {
+                cboCriterio.Items.Add("Mayor a");
+                cboCriterio.Items.Add("Menor a");
+
+            }
+            else
+            {
+                cboCriterio.Items.Add("Contiene");
+                cboCriterio.Items.Add("Comienza con");
+
+            }
+        }
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
