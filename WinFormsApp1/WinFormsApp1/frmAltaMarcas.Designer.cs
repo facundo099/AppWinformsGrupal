@@ -81,6 +81,7 @@
             Controls.Add(lblDescMarca);
             Name = "frmAltaMarcas";
             Text = "Agregar Marca";
+            Load += frmAltaMarcas_Load;
             ResumeLayout(false);
             PerformLayout();
         }

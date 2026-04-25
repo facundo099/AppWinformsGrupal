@@ -81,6 +81,7 @@
             Controls.Add(lblDescripcionCategoria);
             Name = "frmAltaCategoria";
             Text = "Agregar Categoria";
+            Load += frmAltaCategoria_Load;
             ResumeLayout(false);
             PerformLayout();
         }

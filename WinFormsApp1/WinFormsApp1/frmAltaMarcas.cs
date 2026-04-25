@@ -21,6 +21,7 @@ namespace WinFormsApp1
         {
             InitializeComponent();
             this.marca = marca;
+            Text = "Modificar Marca";
         }
 
         private void btnCancelarMarca_Click(object sender, EventArgs e)
@@ -30,12 +31,25 @@ namespace WinFormsApp1
 
         private void btnAcepMarca_Click(object sender, EventArgs e)
         {
-            Marca marca = new Marca();
+            
             MarcaNegocio negocio = new MarcaNegocio();
             try
             {
+                if(marca == null)
+                    marca = new Marca();
                 marca.Descripcion = txtDescMarca.Text;
-                negocio.agregar(marca);
+
+                if(marca.Id != 0)
+                {
+                    negocio.Modificar(marca);
+                    MessageBox.Show("Marca modificada con exito");
+                    Close();
+                    return;
+                }
+                else
+                {
+                 negocio.agregar(marca);
+                }
                 MessageBox.Show("Marca agregada con exito");
                 Close();
 
@@ -47,6 +61,14 @@ namespace WinFormsApp1
                 MessageBox.Show(ex.ToString());
             }
         }
+        
 
+        private void frmAltaMarcas_Load(object sender, EventArgs e)
+        {
+            if (marca != null)
+            {
+                txtDescMarca.Text = marca.Descripcion;
+            }
+        }
     }
 }
