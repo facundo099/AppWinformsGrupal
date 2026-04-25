@@ -31,6 +31,7 @@
             dgvMarcas = new DataGridView();
             btnAgregarMarca = new Button();
             btnEliminarMarca = new Button();
+            btnModificarMarca = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvMarcas).BeginInit();
             SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             // 
             // btnEliminarMarca
             // 
-            btnEliminarMarca.Location = new Point(120, 240);
+            btnEliminarMarca.Location = new Point(116, 240);
             btnEliminarMarca.Name = "btnEliminarMarca";
             btnEliminarMarca.Size = new Size(75, 23);
             btnEliminarMarca.TabIndex = 2;
@@ -65,11 +66,22 @@
             btnEliminarMarca.UseVisualStyleBackColor = true;
             btnEliminarMarca.Click += btnEliminarMarca_Click;
             // 
+            // btnModificarMarca
+            // 
+            btnModificarMarca.Location = new Point(209, 236);
+            btnModificarMarca.Name = "btnModificarMarca";
+            btnModificarMarca.Size = new Size(74, 26);
+            btnModificarMarca.TabIndex = 3;
+            btnModificarMarca.Text = "Modificar";
+            btnModificarMarca.UseVisualStyleBackColor = true;
+            btnModificarMarca.Click += btnModificarMarca_Click;
+            // 
             // frmMarcas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(365, 314);
+            Controls.Add(btnModificarMarca);
             Controls.Add(btnEliminarMarca);
             Controls.Add(btnAgregarMarca);
             Controls.Add(dgvMarcas);
@@ -85,5 +97,6 @@
         private DataGridView dgvMarcas;
         private Button btnAgregarMarca;
         private Button btnEliminarMarca;
+        private Button btnModificarMarca;
     }
 }

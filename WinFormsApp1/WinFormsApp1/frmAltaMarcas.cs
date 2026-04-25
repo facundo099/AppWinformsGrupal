@@ -12,9 +12,15 @@ namespace WinFormsApp1
 {
     public partial class frmAltaMarcas : Form
     {
+        private Marca marca = null;
         public frmAltaMarcas()
         {
             InitializeComponent();
+        }
+        public frmAltaMarcas(Marca marca)
+        {
+            InitializeComponent();
+            this.marca = marca;
         }
 
         private void btnCancelarMarca_Click(object sender, EventArgs e)

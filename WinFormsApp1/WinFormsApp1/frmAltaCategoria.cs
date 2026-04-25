@@ -14,9 +14,15 @@ namespace WinFormsApp1
 {
     public partial class frmAltaCategoria : Form
     {
+        private Categoria categoria = null;
         public frmAltaCategoria()
         {
             InitializeComponent();
+        }
+        public frmAltaCategoria(Categoria categoria)
+        {
+            InitializeComponent();
+            this.categoria = categoria;
         }
 
         private void btnAgregarCategoria_Click(object sender, EventArgs e)

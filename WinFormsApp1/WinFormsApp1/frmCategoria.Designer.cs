@@ -30,7 +30,8 @@
         {
             dgvCategorias = new DataGridView();
             btnAgregarCategoria = new Button();
-            btnEliminarLogicoCat = new Button();
+            btnEliminarCat = new Button();
+            btnModificarCat = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCategorias).BeginInit();
             SuspendLayout();
             // 
@@ -45,30 +46,41 @@
             // 
             // btnAgregarCategoria
             // 
-            btnAgregarCategoria.Location = new Point(23, 223);
+            btnAgregarCategoria.Location = new Point(23, 220);
             btnAgregarCategoria.Name = "btnAgregarCategoria";
-            btnAgregarCategoria.Size = new Size(70, 27);
+            btnAgregarCategoria.Size = new Size(70, 30);
             btnAgregarCategoria.TabIndex = 1;
             btnAgregarCategoria.Text = "Agregar";
             btnAgregarCategoria.UseVisualStyleBackColor = true;
             btnAgregarCategoria.Click += btnAgregarCategoria_Click;
             // 
-            // btnEliminarLogicoCat
+            // btnEliminarCat
             // 
-            btnEliminarLogicoCat.Location = new Point(117, 223);
-            btnEliminarLogicoCat.Name = "btnEliminarLogicoCat";
-            btnEliminarLogicoCat.Size = new Size(65, 25);
-            btnEliminarLogicoCat.TabIndex = 2;
-            btnEliminarLogicoCat.Text = "Eliminar";
-            btnEliminarLogicoCat.UseVisualStyleBackColor = true;
-            btnEliminarLogicoCat.Click += btnEliminarLogicoCat_Click;
+            btnEliminarCat.Location = new Point(114, 220);
+            btnEliminarCat.Name = "btnEliminarCat";
+            btnEliminarCat.Size = new Size(71, 30);
+            btnEliminarCat.TabIndex = 2;
+            btnEliminarCat.Text = "Eliminar";
+            btnEliminarCat.UseVisualStyleBackColor = true;
+            btnEliminarCat.Click += btnEliminarCat_Click;
+            // 
+            // btnModificarCat
+            // 
+            btnModificarCat.Location = new Point(203, 220);
+            btnModificarCat.Name = "btnModificarCat";
+            btnModificarCat.Size = new Size(75, 32);
+            btnModificarCat.TabIndex = 3;
+            btnModificarCat.Text = "Modificar";
+            btnModificarCat.UseVisualStyleBackColor = true;
+            btnModificarCat.Click += btnModificarCat_Click;
             // 
             // frmCategoria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(514, 316);
-            Controls.Add(btnEliminarLogicoCat);
+            Controls.Add(btnModificarCat);
+            Controls.Add(btnEliminarCat);
             Controls.Add(btnAgregarCategoria);
             Controls.Add(dgvCategorias);
             Name = "frmCategoria";
@@ -82,6 +94,7 @@
 
         private DataGridView dgvCategorias;
         private Button btnAgregarCategoria;
-        private Button btnEliminarLogicoCat;
+        private Button btnEliminarCat;
+        private Button btnModificarCat;
     }
 }

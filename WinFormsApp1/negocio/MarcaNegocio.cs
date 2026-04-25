@@ -30,7 +30,7 @@ namespace negocio
             catch (Exception ex)
             {
 
-                throw ex;
+                throw;
             }
             finally
             {
@@ -59,24 +59,26 @@ namespace negocio
             }
         }
 
-        public void EliminarLogicaMarca(int id)
+        
+
+        public void eliminarFisico(int id)
         {
+            AccesoDatos datos = new AccesoDatos();
             try
             {
-                AccesoDatos datos = new AccesoDatos();
-                datos.setearConsulta("DELETE FROM MARCAS WHERE Id = @id");
-                datos.setearParametro("@id", id);
+                datos.setearConsulta("DELETE FROM MARCAS WHERE Id = @Id");
+                datos.setearParametro("@Id", id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
-
-        public void EliminarFisicaMarca(int id)
-        { }
 
         public void Modificar(Marca marca)
         {
@@ -91,6 +93,31 @@ namespace negocio
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public int contarArticulosPorMarca(int idMarca)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("SELECT COUNT(*) FROM ARTICULOS WHERE idMarca = @id");
+                datos.setearParametro("@id", idMarca);
+                datos.ejecutarLectura();
+                
+                if (datos.Lector.Read())
+                    
+                    return (int)datos.Lector[0];
+
+                return 0;
+            }
+            catch (Exception)
+            {
+                throw;
             }
             finally
             {

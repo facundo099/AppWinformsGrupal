@@ -28,6 +28,14 @@ namespace WinFormsApp1
             alta.ShowDialog();
             cargar();
         }
+        private void btnModificarMarca_Click(object sender, EventArgs e)
+        {
+            Marca seleccionado;
+            seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+            frmAltaMarcas modificar = new frmAltaMarcas(seleccionado);
+            modificar.ShowDialog();
+            cargar();
+        }
         private void cargar()
         {
             MarcaNegocio negocio = new MarcaNegocio();
@@ -36,32 +44,39 @@ namespace WinFormsApp1
 
         private void btnEliminarMarca_Click(object sender, EventArgs e)
         {
-            eliminar(true);
-        }
-        private void eliminar(bool logico = false)
-        {
+
             MarcaNegocio negocio = new MarcaNegocio();
-            Marca marca;
+            Marca seleccionado;
+
             try
             {
-                //DialogResult respuesta = MessageBox.Show("Quieres Eliminar la categoria?");
-                //if(respuesta == DialogResult.Yes)
-                //{
-                marca = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
-                if (logico)
-                    negocio.EliminarLogicaMarca(marca.Id);
-                else
+
+                seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                int cantidad = negocio.contarArticulosPorMarca(seleccionado.Id);
+
+                if (cantidad > 0)
                 {
-                    negocio.EliminarFisicaMarca(marca.Id);
+                    MessageBox.Show("No podés eliminar esta marca porque tiene " + cantidad + " artículos asociados.");
+                    return;
                 }
-                cargar();
-                //}
+
+                DialogResult respuesta = MessageBox.Show(
+                    "¿Confirma que desea eliminar la marca?",
+                    "Eliminando",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    negocio.eliminarFisico(seleccionado.Id);
+                    cargar();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-
         }
+
     }
 }

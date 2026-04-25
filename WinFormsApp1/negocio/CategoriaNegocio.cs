@@ -72,9 +72,23 @@ namespace negocio
             //    throw ex;
             //}
         }
-        public void eliminarFisicaCategoria(int id)
+        public void eliminarFisico(int id)
         {
-            
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("DELETE FROM CATEGORIAS WHERE Id = @Id");
+                datos.setearParametro("@Id", id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
 
         public void Modificar(Categoria modificado)
@@ -91,6 +105,31 @@ namespace negocio
             {
 
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public int contarArticulosPorCategoria(int idCategoria)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("SELECT COUNT(*) FROM ARTICULOS WHERE IdCategoria = @id");
+                datos.setearParametro("@id", idCategoria);
+                datos.ejecutarLectura();
+
+                if (datos.Lector.Read())
+                    return (int)datos.Lector[0];
+
+                return 0;
+            }
+            catch (Exception)
+            {
+                throw;
             }
             finally
             {
