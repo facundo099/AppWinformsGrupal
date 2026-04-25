@@ -116,6 +116,14 @@ namespace WinFormsApp1
 
         private void txtUrlImagen_Leave(object sender, EventArgs e)
         {
+            try
+            {
+                pbImagen.Load(txtUrlImagen.Text);
+            }
+            catch
+            {
+                pbImagen.Load("https://t4.ftcdn.net/jpg/06/57/37/01/360_F_657370150_pdNeG5pjI976ZasVbKN9VqH1rfoykdYU.jpg");
+            }
         }
 
     

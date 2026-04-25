@@ -80,8 +80,7 @@ namespace WinFormsApp1
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Articulo seleccionado;
-            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
             modificar.ShowDialog();
             cargar();
