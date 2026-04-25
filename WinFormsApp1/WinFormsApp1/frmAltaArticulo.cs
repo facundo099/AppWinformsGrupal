@@ -13,6 +13,8 @@ namespace WinFormsApp1
     public partial class frmAltaArticulo : Form
     {
         private Articulo articulo = null;
+        private List<string> urlsImagenes = new List<string>();
+
         public frmAltaArticulo()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace WinFormsApp1
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            
+
             ArticuloNegocio artNegocio = new ArticuloNegocio();
             ImagenNegocio imgNegocio = new ImagenNegocio();
 
@@ -64,11 +66,14 @@ namespace WinFormsApp1
                     List<Articulo> lista = artNegocio.Listar();
                     Articulo ultimo = lista[lista.Count - 1];
 
-                    Imagen nueva = new Imagen();
-                    nueva.IdArticulo = ultimo.Id;
-                    nueva.ImagenUrl = txtUrlImagen.Text;
+                    foreach (string url in urlsImagenes)
+                    {
+                        Imagen nueva = new Imagen();
+                        nueva.IdArticulo = ultimo.Id;
+                        nueva.ImagenUrl = url;
 
-                    imgNegocio.agregar(nueva);
+                        imgNegocio.agregar(nueva);
+                    }
                 }
 
                 MessageBox.Show("Guardado correctamente");
@@ -104,9 +109,15 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                
+
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void txtUrlImagen_Leave(object sender, EventArgs e)
+        {
+        }
+
+    
     }
 }

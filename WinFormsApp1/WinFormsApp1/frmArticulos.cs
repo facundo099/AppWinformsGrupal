@@ -43,31 +43,12 @@ namespace WinFormsApp1
             imagenesSeleccionadas = imgNegocio.ListarImagenPorArticulo(seleccionado.Id);
             indiceImagen = 0;
 
-            cargarImagen();
+            pbArticulo.Load(HelperImagen.CargarImagen(imagenesSeleccionadas, indiceImagen));
 
 
         }
 
-        private void cargarImagen()
-        {
-            try
-            {
-                if (imagenesSeleccionadas != null && imagenesSeleccionadas.Count > 0)
-                {
-
-                    pbArticulo.Load(imagenesSeleccionadas[indiceImagen].ImagenUrl);
-                }
-                else
-                {
-                    throw new Exception();
-                }
-            }
-            catch (Exception)
-            {
-
-                pbArticulo.Load("https://t4.ftcdn.net/jpg/06/57/37/01/360_F_657370150_pdNeG5pjI976ZasVbKN9VqH1rfoykdYU.jpg");
-            }
-        }
+       
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -83,7 +64,7 @@ namespace WinFormsApp1
             if (imagenesSeleccionadas != null && indiceImagen > 0)
             {
                 indiceImagen--;
-                cargarImagen();
+                pbArticulo.Load(HelperImagen.CargarImagen(imagenesSeleccionadas, indiceImagen));
             }
 
         }
@@ -93,7 +74,7 @@ namespace WinFormsApp1
             if (imagenesSeleccionadas != null && indiceImagen < imagenesSeleccionadas.Count - 1)
             {
                 indiceImagen++;
-                cargarImagen();
+                pbArticulo.Load(HelperImagen.CargarImagen(imagenesSeleccionadas, indiceImagen));
             }
         }
 

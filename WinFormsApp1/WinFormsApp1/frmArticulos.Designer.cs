@@ -69,7 +69,7 @@
             btnAgregar.Margin = new Padding(3, 4, 3, 4);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(127, 43);
-            btnAgregar.TabIndex = 2;
+            btnAgregar.TabIndex = 0;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
@@ -80,7 +80,7 @@
             btnAnterior.Location = new Point(930, 193);
             btnAnterior.Name = "btnAnterior";
             btnAnterior.Size = new Size(31, 38);
-            btnAnterior.TabIndex = 3;
+            btnAnterior.TabIndex = 4;
             btnAnterior.Text = "<";
             btnAnterior.UseVisualStyleBackColor = false;
             btnAnterior.Click += btnAnterior_Click;
@@ -91,7 +91,7 @@
             btnSiguiente.Location = new Point(1332, 203);
             btnSiguiente.Name = "btnSiguiente";
             btnSiguiente.Size = new Size(31, 38);
-            btnSiguiente.TabIndex = 4;
+            btnSiguiente.TabIndex = 5;
             btnSiguiente.Text = ">";
             btnSiguiente.UseVisualStyleBackColor = false;
             btnSiguiente.Click += btnSiguiente_Click;
@@ -101,7 +101,7 @@
             btnModificar.Location = new Point(157, 393);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(127, 43);
-            btnModificar.TabIndex = 2;
+            btnModificar.TabIndex = 1;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
             btnModificar.Click += btnModificar_Click;
@@ -112,7 +112,7 @@
             btnEliminarLogico.Margin = new Padding(3, 4, 3, 4);
             btnEliminarLogico.Name = "btnEliminarLogico";
             btnEliminarLogico.Size = new Size(127, 43);
-            btnEliminarLogico.TabIndex = 5;
+            btnEliminarLogico.TabIndex = 3;
             btnEliminarLogico.Text = "Eliminar Logico";
             btnEliminarLogico.UseVisualStyleBackColor = true;
             btnEliminarLogico.Click += btnEliminarLogico_Click;
@@ -123,7 +123,7 @@
             btnEliminarFisico.Margin = new Padding(3, 4, 3, 4);
             btnEliminarFisico.Name = "btnEliminarFisico";
             btnEliminarFisico.Size = new Size(127, 43);
-            btnEliminarFisico.TabIndex = 6;
+            btnEliminarFisico.TabIndex = 2;
             btnEliminarFisico.Text = "Eliminar Fisico";
             btnEliminarFisico.UseVisualStyleBackColor = true;
             btnEliminarFisico.Click += btnEliminarFisico_Click;

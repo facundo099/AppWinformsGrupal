@@ -37,17 +37,20 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.Padding = new Padding(7, 3, 0, 3);
+            menuStrip1.Size = new Size(737, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(351, 318);
+            btnSalir.Location = new Point(329, 245);
+            btnSalir.Margin = new Padding(3, 4, 3, 4);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(98, 23);
+            btnSalir.Size = new Size(112, 31);
             btnSalir.TabIndex = 1;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
@@ -55,9 +58,10 @@
             // 
             // btnArticulos
             // 
-            btnArticulos.Location = new Point(351, 230);
+            btnArticulos.Location = new Point(312, 162);
+            btnArticulos.Margin = new Padding(3, 4, 3, 4);
             btnArticulos.Name = "btnArticulos";
-            btnArticulos.Size = new Size(94, 23);
+            btnArticulos.Size = new Size(107, 31);
             btnArticulos.TabIndex = 2;
             btnArticulos.Text = "Articulos";
             btnArticulos.UseVisualStyleBackColor = true;
@@ -65,9 +69,10 @@
             // 
             // btnListarMarcas
             // 
-            btnListarMarcas.Location = new Point(189, 230);
+            btnListarMarcas.Location = new Point(116, 162);
+            btnListarMarcas.Margin = new Padding(3, 4, 3, 4);
             btnListarMarcas.Name = "btnListarMarcas";
-            btnListarMarcas.Size = new Size(156, 23);
+            btnListarMarcas.Size = new Size(178, 31);
             btnListarMarcas.TabIndex = 4;
             btnListarMarcas.Text = "Listar Marcas";
             btnListarMarcas.UseVisualStyleBackColor = true;
@@ -75,9 +80,10 @@
             // 
             // btnListarCategorias
             // 
-            btnListarCategorias.Location = new Point(451, 230);
+            btnListarCategorias.Location = new Point(436, 162);
+            btnListarCategorias.Margin = new Padding(3, 4, 3, 4);
             btnListarCategorias.Name = "btnListarCategorias";
-            btnListarCategorias.Size = new Size(156, 23);
+            btnListarCategorias.Size = new Size(178, 31);
             btnListarCategorias.TabIndex = 5;
             btnListarCategorias.Text = "Listar Categorias";
             btnListarCategorias.UseVisualStyleBackColor = true;
@@ -85,15 +91,16 @@
             // 
             // frmInicio
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(737, 340);
             Controls.Add(btnListarCategorias);
             Controls.Add(btnListarMarcas);
             Controls.Add(btnArticulos);
             Controls.Add(btnSalir);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmInicio";
             Text = "frmInicio";
             ResumeLayout(false);
