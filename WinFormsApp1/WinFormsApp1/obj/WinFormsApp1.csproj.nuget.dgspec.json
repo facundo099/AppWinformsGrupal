@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\dominio\\dominio.csproj": {
+    "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\dominio\\dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\dominio\\dominio.csproj",
+        "projectUniqueName": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\dominio\\dominio.csproj",
         "projectName": "dominio",
-        "projectPath": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\dominio\\dominio.csproj",
-        "packagesPath": "C:\\Users\\Theov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\dominio\\obj\\",
+        "projectPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\dominio\\dominio.csproj",
+        "packagesPath": "C:\\Users\\facua\\.nuget\\packages\\",
+        "outputPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\dominio\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Theov\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\facua\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -370,21 +366,17 @@
         }
       }
     },
-    "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\negocio\\negocio.csproj": {
+    "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\negocio\\negocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\negocio\\negocio.csproj",
+        "projectUniqueName": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\negocio\\negocio.csproj",
         "projectName": "negocio",
-        "projectPath": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\negocio\\negocio.csproj",
-        "packagesPath": "C:\\Users\\Theov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\negocio\\obj\\",
+        "projectPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\negocio\\negocio.csproj",
+        "packagesPath": "C:\\Users\\facua\\.nuget\\packages\\",
+        "outputPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\negocio\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Theov\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\facua\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -399,8 +391,8 @@
             "framework": "net10.0-windows7.0",
             "targetAlias": "net10.0-windows",
             "projectReferences": {
-              "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\dominio\\dominio.csproj": {
-                "projectPath": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\dominio\\dominio.csproj"
+              "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\dominio\\dominio.csproj": {
+                "projectPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\dominio\\dominio.csproj"
               }
             }
           }
@@ -740,21 +732,17 @@
         }
       }
     },
-    "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
-        "packagesPath": "C:\\Users\\Theov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1\\obj\\",
+        "projectPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "packagesPath": "C:\\Users\\facua\\.nuget\\packages\\",
+        "outputPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Theov\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\facua\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -769,11 +757,11 @@
             "framework": "net10.0-windows7.0",
             "targetAlias": "net10.0-windows",
             "projectReferences": {
-              "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\dominio\\dominio.csproj": {
-                "projectPath": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\dominio\\dominio.csproj"
+              "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\dominio\\dominio.csproj": {
+                "projectPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\dominio\\dominio.csproj"
               },
-              "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\negocio\\negocio.csproj": {
-                "projectPath": "C:\\Users\\Theov\\source\\repos\\AppWinformsGrupal\\WinFormsApp1\\WinFormsApp1\\negocio\\negocio.csproj"
+              "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\negocio\\negocio.csproj": {
+                "projectPath": "Y:\\Programacion III\\AppWinformsGrupal\\WinFormsApp1\\negocio\\negocio.csproj"
               }
             }
           }

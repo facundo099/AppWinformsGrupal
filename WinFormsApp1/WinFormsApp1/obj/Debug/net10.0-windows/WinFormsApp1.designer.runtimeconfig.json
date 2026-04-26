@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Theov\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Theov\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\facua\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\facua\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false,

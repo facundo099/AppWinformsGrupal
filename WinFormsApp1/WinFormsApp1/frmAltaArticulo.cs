@@ -119,6 +119,8 @@ namespace WinFormsApp1
             try
             {
                 pbImagen.Load(txtUrlImagen.Text);
+                urlsImagenes.Clear();
+                urlsImagenes.Add(txtUrlImagen.Text);
             }
             catch
             {
@@ -127,6 +129,19 @@ namespace WinFormsApp1
         }
 
 
-    
+        private void btnAltaImagen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog archivo = new OpenFileDialog();
+            archivo.Filter = "jpg|*.jpg|png|*.png";
+
+            if (archivo.ShowDialog() == DialogResult.OK)
+            {
+                txtUrlImagen.Text = archivo.FileName;
+                pbImagen.Load(archivo.FileName);
+                urlsImagenes.Clear();        
+                urlsImagenes.Add(archivo.FileName);
+
+            }
+        }
     }
 }

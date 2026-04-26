@@ -24,7 +24,7 @@ namespace WinFormsApp1
             cboCampo.Items.Add("Nombre");
             cboCampo.Items.Add("Marca");
             cboCampo.Items.Add("Precio");
-            
+
 
         }
         private void cargar()
@@ -54,12 +54,10 @@ namespace WinFormsApp1
             }
             catch
             {
-                pbArticulo.Load("url default");
+                pbArticulo.LoadAsync("https://via.placeholder.com/150");
             }
 
         }
-
-
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -67,8 +65,6 @@ namespace WinFormsApp1
             alta.ShowDialog();
             cargar();
         }
-
-
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
@@ -184,7 +180,7 @@ namespace WinFormsApp1
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
-                if(validarBuscar())
+                if (validarBuscar())
                     return;
 
                 string campo = cboCampo.SelectedItem.ToString();
@@ -221,5 +217,7 @@ namespace WinFormsApp1
         {
 
         }
+
+        
     }
 }

@@ -51,31 +51,30 @@
             // 
             dgvArticulos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvArticulos.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dgvArticulos.Location = new Point(11, 13);
-            dgvArticulos.Margin = new Padding(3, 4, 3, 4);
+            dgvArticulos.Location = new Point(10, 10);
             dgvArticulos.MultiSelect = false;
             dgvArticulos.Name = "dgvArticulos";
             dgvArticulos.RowHeadersWidth = 51;
             dgvArticulos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvArticulos.Size = new Size(901, 372);
+            dgvArticulos.Size = new Size(788, 279);
             dgvArticulos.TabIndex = 0;
             dgvArticulos.SelectionChanged += dgvArticulos_SelectionChanged;
             // 
             // pbArticulo
             // 
-            pbArticulo.Location = new Point(967, 40);
+            pbArticulo.Location = new Point(846, 30);
+            pbArticulo.Margin = new Padding(3, 2, 3, 2);
             pbArticulo.Name = "pbArticulo";
-            pbArticulo.Size = new Size(359, 317);
+            pbArticulo.Size = new Size(314, 238);
             pbArticulo.SizeMode = PictureBoxSizeMode.StretchImage;
             pbArticulo.TabIndex = 1;
             pbArticulo.TabStop = false;
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(14, 393);
-            btnAgregar.Margin = new Padding(3, 4, 3, 4);
+            btnAgregar.Location = new Point(12, 295);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(127, 43);
+            btnAgregar.Size = new Size(111, 32);
             btnAgregar.TabIndex = 0;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -84,9 +83,10 @@
             // btnAnterior
             // 
             btnAnterior.BackColor = SystemColors.ActiveCaption;
-            btnAnterior.Location = new Point(930, 193);
+            btnAnterior.Location = new Point(814, 145);
+            btnAnterior.Margin = new Padding(3, 2, 3, 2);
             btnAnterior.Name = "btnAnterior";
-            btnAnterior.Size = new Size(31, 38);
+            btnAnterior.Size = new Size(27, 28);
             btnAnterior.TabIndex = 4;
             btnAnterior.Text = "<";
             btnAnterior.UseVisualStyleBackColor = false;
@@ -95,9 +95,10 @@
             // btnSiguiente
             // 
             btnSiguiente.BackColor = SystemColors.ActiveCaption;
-            btnSiguiente.Location = new Point(1332, 203);
+            btnSiguiente.Location = new Point(1166, 152);
+            btnSiguiente.Margin = new Padding(3, 2, 3, 2);
             btnSiguiente.Name = "btnSiguiente";
-            btnSiguiente.Size = new Size(31, 38);
+            btnSiguiente.Size = new Size(27, 28);
             btnSiguiente.TabIndex = 5;
             btnSiguiente.Text = ">";
             btnSiguiente.UseVisualStyleBackColor = false;
@@ -105,9 +106,10 @@
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(157, 393);
+            btnModificar.Location = new Point(137, 295);
+            btnModificar.Margin = new Padding(3, 2, 3, 2);
             btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(127, 43);
+            btnModificar.Size = new Size(111, 32);
             btnModificar.TabIndex = 1;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
@@ -115,10 +117,9 @@
             // 
             // btnEliminarLogico
             // 
-            btnEliminarLogico.Location = new Point(423, 393);
-            btnEliminarLogico.Margin = new Padding(3, 4, 3, 4);
+            btnEliminarLogico.Location = new Point(370, 295);
             btnEliminarLogico.Name = "btnEliminarLogico";
-            btnEliminarLogico.Size = new Size(127, 43);
+            btnEliminarLogico.Size = new Size(111, 32);
             btnEliminarLogico.TabIndex = 3;
             btnEliminarLogico.Text = "Eliminar Logico";
             btnEliminarLogico.UseVisualStyleBackColor = true;
@@ -126,10 +127,9 @@
             // 
             // btnEliminarFisico
             // 
-            btnEliminarFisico.Location = new Point(290, 393);
-            btnEliminarFisico.Margin = new Padding(3, 4, 3, 4);
+            btnEliminarFisico.Location = new Point(254, 295);
             btnEliminarFisico.Name = "btnEliminarFisico";
-            btnEliminarFisico.Size = new Size(127, 43);
+            btnEliminarFisico.Size = new Size(111, 32);
             btnEliminarFisico.TabIndex = 2;
             btnEliminarFisico.Text = "Eliminar Fisico";
             btnEliminarFisico.UseVisualStyleBackColor = true;
@@ -138,27 +138,27 @@
             // lblCampo
             // 
             lblCampo.AutoSize = true;
-            lblCampo.Location = new Point(14, 472);
+            lblCampo.Location = new Point(12, 354);
             lblCampo.Name = "lblCampo";
-            lblCampo.Size = new Size(57, 20);
+            lblCampo.Size = new Size(46, 15);
             lblCampo.TabIndex = 6;
             lblCampo.Text = "Campo";
             // 
             // lblCriterio
             // 
             lblCriterio.AutoSize = true;
-            lblCriterio.Location = new Point(227, 472);
+            lblCriterio.Location = new Point(199, 354);
             lblCriterio.Name = "lblCriterio";
-            lblCriterio.Size = new Size(58, 20);
+            lblCriterio.Size = new Size(46, 15);
             lblCriterio.TabIndex = 7;
             lblCriterio.Text = "Criterio";
             // 
             // lblFiltro
             // 
             lblFiltro.AutoSize = true;
-            lblFiltro.Location = new Point(460, 472);
+            lblFiltro.Location = new Point(402, 354);
             lblFiltro.Name = "lblFiltro";
-            lblFiltro.Size = new Size(43, 20);
+            lblFiltro.Size = new Size(34, 15);
             lblFiltro.TabIndex = 8;
             lblFiltro.Text = "Filtro";
             // 
@@ -166,9 +166,10 @@
             // 
             cboCampo.DropDownStyle = ComboBoxStyle.DropDownList;
             cboCampo.FormattingEnabled = true;
-            cboCampo.Location = new Point(77, 469);
+            cboCampo.Location = new Point(67, 352);
+            cboCampo.Margin = new Padding(3, 2, 3, 2);
             cboCampo.Name = "cboCampo";
-            cboCampo.Size = new Size(122, 28);
+            cboCampo.Size = new Size(107, 23);
             cboCampo.TabIndex = 9;
             cboCampo.SelectedIndexChanged += cboCampo_SelectedIndexChanged;
             // 
@@ -176,24 +177,27 @@
             // 
             cboCriterio.DropDownStyle = ComboBoxStyle.DropDownList;
             cboCriterio.FormattingEnabled = true;
-            cboCriterio.Location = new Point(290, 469);
+            cboCriterio.Location = new Point(254, 352);
+            cboCriterio.Margin = new Padding(3, 2, 3, 2);
             cboCriterio.Name = "cboCriterio";
-            cboCriterio.Size = new Size(122, 28);
+            cboCriterio.Size = new Size(107, 23);
             cboCriterio.TabIndex = 10;
             // 
             // txtFiltro
             // 
-            txtFiltro.Location = new Point(509, 469);
+            txtFiltro.Location = new Point(445, 352);
+            txtFiltro.Margin = new Padding(3, 2, 3, 2);
             txtFiltro.Name = "txtFiltro";
-            txtFiltro.Size = new Size(141, 27);
+            txtFiltro.Size = new Size(124, 23);
             txtFiltro.TabIndex = 11;
             txtFiltro.TextChanged += txtFiltro_TextChanged;
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(696, 466);
+            btnBuscar.Location = new Point(609, 350);
+            btnBuscar.Margin = new Padding(3, 2, 3, 2);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(119, 32);
+            btnBuscar.Size = new Size(104, 24);
             btnBuscar.TabIndex = 12;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
@@ -201,9 +205,9 @@
             // 
             // frmArticulos
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1393, 514);
+            ClientSize = new Size(1219, 386);
             Controls.Add(btnBuscar);
             Controls.Add(txtFiltro);
             Controls.Add(cboCriterio);
@@ -219,7 +223,6 @@
             Controls.Add(btnAgregar);
             Controls.Add(pbArticulo);
             Controls.Add(dgvArticulos);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmArticulos";
             Text = "Articulos";
             Load += Form1_Load;
