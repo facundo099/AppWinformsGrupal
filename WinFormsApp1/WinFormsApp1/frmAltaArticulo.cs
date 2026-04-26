@@ -34,7 +34,8 @@ namespace WinFormsApp1
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-
+            if (!ValidarCampos())
+                return;
             ArticuloNegocio artNegocio = new ArticuloNegocio();
             ImagenNegocio imgNegocio = new ImagenNegocio();
 
@@ -53,11 +54,15 @@ namespace WinFormsApp1
                 if (articulo.Id != 0)
                 {
                     artNegocio.modificar(articulo);
-                    Imagen img = new Imagen();
-                    img.IdArticulo = articulo.Id;
-                    img.ImagenUrl = txtUrlImagen.Text;
 
-                    imgNegocio.modificar(img);
+                    foreach (string url in urlsImagenes)
+                    {
+                        Imagen nueva = new Imagen();
+                        nueva.IdArticulo = articulo.Id;
+                        nueva.ImagenUrl = url;
+
+                        imgNegocio.agregar(nueva);
+                    }
                 }
                 else
                 {
@@ -85,6 +90,54 @@ namespace WinFormsApp1
             }
         }
 
+        private bool ValidarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(txtCodigo.Text))
+            {
+                MessageBox.Show("Debe ingresar un código.");
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                MessageBox.Show("Debe ingresar un nombre.");
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
+            {
+                MessageBox.Show("Debe ingresar una descripción.");
+                return false;
+            }
+
+            if (cboMarca.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar una marca.");
+                return false;
+            }
+
+            if (cboCategoria.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar una categoría.");
+                return false;
+            }
+
+            decimal precio;
+            if (!decimal.TryParse(txtPrecio.Text, out precio))
+            {
+                MessageBox.Show("Debe ingresar un precio válido.");
+                return false;
+            }
+
+            if (precio <= 0)
+            {
+                MessageBox.Show("El precio debe ser mayor a 0.");
+                return false;
+            }
+
+            return true;
+        }
+
         private void frmAltaArticulo_Load(object sender, EventArgs e)
         {
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
@@ -102,8 +155,13 @@ namespace WinFormsApp1
                     txtCodigo.Text = articulo.Codigo;
                     txtNombre.Text = articulo.Nombre;
                     txtDescripcion.Text = articulo.Descripcion;
-                    cboCategoria.SelectedValue = articulo.Categoria.Id;
-                    cboMarca.SelectedValue = articulo.Marca.Id;
+
+                    if (articulo.Categoria != null)
+                        cboCategoria.SelectedValue = articulo.Categoria.Id;
+
+                    if (articulo.Marca != null)
+                        cboMarca.SelectedValue = articulo.Marca.Id;
+
                     txtPrecio.Text = articulo.Precio.ToString();
                 }
             }
@@ -119,7 +177,7 @@ namespace WinFormsApp1
             try
             {
                 pbImagen.Load(txtUrlImagen.Text);
-                urlsImagenes.Clear();
+
                 urlsImagenes.Add(txtUrlImagen.Text);
             }
             catch
@@ -138,9 +196,17 @@ namespace WinFormsApp1
             {
                 txtUrlImagen.Text = archivo.FileName;
                 pbImagen.Load(archivo.FileName);
-                urlsImagenes.Clear();        
                 urlsImagenes.Add(archivo.FileName);
 
+            }
+        }
+
+        private void btnAgregarUrl_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtUrlImagen.Text))
+            {
+                urlsImagenes.Add(txtUrlImagen.Text);
+                txtUrlImagen.Clear();
             }
         }
     }

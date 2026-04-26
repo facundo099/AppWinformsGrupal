@@ -57,6 +57,8 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        //implementar eliminación lógica, para eso se necesita agregar un campo "Estado" a la tabla Categorias, y modificar el método Listar para que solo traiga las categorías con Estado = 1
         public void eliminarLogicaCategoria(int id)
         {
             //try

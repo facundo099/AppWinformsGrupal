@@ -77,7 +77,7 @@ namespace WinFormsApp1
                 }
                 catch
                 {
-                    pbArticulo.Load("url default");
+                    pbArticulo.Load("https://t4.ftcdn.net/jpg/06/57/37/01/360_F_657370150_pdNeG5pjI976ZasVbKN9VqH1rfoykdYU.jpg");
                 }
             }
 
@@ -94,13 +94,18 @@ namespace WinFormsApp1
                 }
                 catch
                 {
-                    pbArticulo.Load("url default");
+                    pbArticulo.Load("https://t4.ftcdn.net/jpg/06/57/37/01/360_F_657370150_pdNeG5pjI976ZasVbKN9VqH1rfoykdYU.jpg");
                 }
             }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            if (dgvArticulos.CurrentRow == null)
+            {
+                MessageBox.Show("Seleccione un artículo para modificar.");
+                return;
+            }
             Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
             modificar.ShowDialog();
@@ -108,9 +113,10 @@ namespace WinFormsApp1
 
         }
 
+        // implementar eliminación lógica cuando exista la columna Activo en DB.
         private void btnEliminarLogico_Click(object sender, EventArgs e)
         {
-            eliminar(true);
+          //  eliminar(true);
         }
         private void btnEliminarFisico_Click(object sender, EventArgs e)
         {
@@ -118,6 +124,11 @@ namespace WinFormsApp1
         }
         private void eliminar(bool logico = false)
         {
+            if (dgvArticulos.CurrentRow == null)
+            {
+                MessageBox.Show("Seleccione un artículo.");
+                return;
+            }
             ArticuloNegocio negocio = new ArticuloNegocio();
             Articulo seleccionado;
             try
