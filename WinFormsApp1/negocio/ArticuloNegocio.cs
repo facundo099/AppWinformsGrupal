@@ -158,6 +158,45 @@ namespace negocio
             }
         }
 
+        public void eliminarPorCategoria(int idCategoria)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("DELETE FROM ARTICULOS WHERE IdCategoria = @id");
+                datos.setearParametro("@id", idCategoria);
+                datos.ejecutarAccion();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void eliminarPorMarca(int idMarca)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("DELETE FROM ARTICULOS WHERE IdMarca = @id");
+                datos.setearParametro("@id", idMarca);
+                datos.ejecutarAccion();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
         public List<Articulo> BuscarArticulo(string campo, string criterio, string filtro)
         {
             List<Articulo> lista = new List<Articulo>();

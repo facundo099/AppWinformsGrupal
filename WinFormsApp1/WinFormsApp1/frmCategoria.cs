@@ -50,6 +50,7 @@ namespace WinFormsApp1
         private void btnEliminarCat_Click(object sender, EventArgs e)
         {
             CategoriaNegocio negocio = new CategoriaNegocio();
+            ArticuloNegocio negocioArt = new ArticuloNegocio();
             Categoria seleccionado;
 
             try
@@ -60,20 +61,34 @@ namespace WinFormsApp1
 
                 if (cantidad > 0)
                 {
-                    MessageBox.Show("No podés eliminar esta categoria porque tiene " + cantidad + " artículos asociados.");
-                    return;
-                }
+                    DialogResult respuesta = MessageBox.Show(
+                   "Esta categoría tiene " + cantidad + " artículos.\n¿Querés eliminarlos también?",
+                   "Atención",
+                   MessageBoxButtons.YesNo,
+                   MessageBoxIcon.Warning);
 
-                DialogResult respuesta = MessageBox.Show(
-                    "¿Confirma que desea eliminar la categoria?",
-                    "Eliminando",
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        negocioArt.eliminarPorCategoria(seleccionado.Id);
+                        negocio.eliminarFisico(seleccionado.Id);
+
+                        cargar();
+                    }
+                }
+                else
+                {
+                    DialogResult respuesta = MessageBox.Show(
+                    "¿Querés eliminar esta categoría?",
+                    "Atención",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning);
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        negocio.eliminarFisico(seleccionado.Id);
+                        cargar();
+                    }
 
-                if (respuesta == DialogResult.Yes)
-                {
-                    negocio.eliminarFisico(seleccionado.Id);
-                    cargar();
+
                 }
             }
             catch (Exception ex)

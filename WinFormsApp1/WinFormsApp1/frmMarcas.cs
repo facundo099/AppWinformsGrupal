@@ -46,6 +46,7 @@ namespace WinFormsApp1
         {
 
             MarcaNegocio negocio = new MarcaNegocio();
+            ArticuloNegocio negocioArt = new ArticuloNegocio();
             Marca seleccionado;
 
             try
@@ -53,23 +54,36 @@ namespace WinFormsApp1
 
                 seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
                 int cantidad = negocio.contarArticulosPorMarca(seleccionado.Id);
-
                 if (cantidad > 0)
                 {
-                    MessageBox.Show("No podés eliminar esta marca porque tiene " + cantidad + " artículos asociados.");
-                    return;
-                }
+                    DialogResult respuesta = MessageBox.Show(
+                   "Esta marca tiene " + cantidad + " artículos.\n¿Querés eliminarlos también?",
+                   "Atención",
+                   MessageBoxButtons.YesNo,
+                   MessageBoxIcon.Warning);
 
-                DialogResult respuesta = MessageBox.Show(
-                    "¿Confirma que desea eliminar la marca?",
-                    "Eliminando",
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        negocioArt.eliminarPorMarca(seleccionado.Id);
+                        negocio.eliminarFisico(seleccionado.Id);
+
+                        cargar();
+                    }
+                }
+                else
+                {
+                    DialogResult respuesta = MessageBox.Show(
+                    "¿Querés eliminar esta marca?",
+                    "Atención",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning);
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        negocio.eliminarFisico(seleccionado.Id);
+                        cargar();
+                    }
 
-                if (respuesta == DialogResult.Yes)
-                {
-                    negocio.eliminarFisico(seleccionado.Id);
-                    cargar();
+
                 }
             }
             catch (Exception ex)
